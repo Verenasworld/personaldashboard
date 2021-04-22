@@ -1,7 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap');
+
+
+html{
+    font-family: 'Inter', sans-serif;
+}
 html, body{
     height: 100%;
     margin: 0;
+}
+
+h1{
+    font-size: 40px;
+
+}
+
+h2{
+    font-size: 40px;
+    
 }
