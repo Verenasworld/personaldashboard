@@ -10,14 +10,13 @@
 
     .tab{
         position: relative;
+        z-index: 1;
     }
 
 
     .tab-title{
         display: flexgit push --set-upstream origin tabs;
         padding: 16px;
-        //background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
-       // border-radius: 10px;
         cursor: pointer;
         i{
             columns: #222;
@@ -28,7 +27,23 @@
 .tab-title::before{
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(violet,0.5);
+    z-index: -1;
+    border-radius: 10px;
+  
+}
+
+.bookmark-tab .tab-title::before{
+    background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
+}
+
+.todo-tab .tab-title::before{
+    background: linear-gradient(45deg, #a2c6ff, #ffbdde);
+}
+
+.notes-tab .tab-title::before{
+    background: linear-gradient(45deg, #d2cdff, #a7e8f3);
 }
