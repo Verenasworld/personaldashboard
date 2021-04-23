@@ -2,10 +2,15 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #e1e2ed;
+   // background-color: #e1e2ed;
+   background-image: url("https://images.unsplash.com/photo-1617907775919-4ccc66e5bc66?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixlib=rb-1.2.1&q=80&w=1920)");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
 }
 .top-section{
-background-color: antiquewhite;
+//background-color: antiquewhite;
 text-align: center;
 padding: 100px 0;
 h1{
@@ -22,12 +27,12 @@ h2{
 
 }
 .content-section{
-background-color: aquamarine;
+//background-color: aquamarine;
 flex-grow: 1;
 }
 
 .bottom-section{
-    background-color: cadetblue;
+    //background-color: cadetblue;
     display: flex;
     app-tabs{
         margin: auto;
