@@ -30,6 +30,9 @@
     }
     .tab.selected .tab-title{
         transform: translateY(-30px);
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(0, 0, 0, 2);
+
 
     }
 
