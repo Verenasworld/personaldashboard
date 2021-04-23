@@ -1,0 +1,16 @@
+.tabs{
+    display: flex;
+    padding: 10px;
+    background-color: rgba(white, 0.25);
+    border-radius: 12px;
+    gap: 14px;
+    .tab-title{
+        display: flex;
+        padding: 16px;
+        background: rgba(black, 0.1);
+        cursor: pointer;
+        i{
+            columns: #222;
+        }
+    }
+}

@@ -28,5 +28,9 @@ flex-grow: 1;
 
 .bottom-section{
     background-color: cadetblue;
+    display: flex;
+    app-tabs{
+        margin: auto;
+    }
 
 }
