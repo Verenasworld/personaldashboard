@@ -8,15 +8,27 @@
     margin: 12px;
     margin-top: 50px;
 
+    .tab{
+        position: relative;
+    }
+
 
     .tab-title{
         display: flexgit push --set-upstream origin tabs;
         padding: 16px;
-        background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
-        border-radius: 10px;
+        //background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
+       // border-radius: 10px;
         cursor: pointer;
         i{
             columns: #222;
         }
     }
+}
+
+.tab-title::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(violet,0.5);
 }
