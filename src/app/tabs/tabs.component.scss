@@ -23,8 +23,17 @@
         i{
             color: #222;
             
+
         }
+
+        transition: all 0.2s;
     }
+    .tab.selected .tab-title{
+        transform: translateY(-30px);
+
+    }
+
+
 }
 
 
@@ -55,6 +64,9 @@
 .notes-tab .tab-title::before{
     background: linear-gradient(45deg, #d2cdff, #a7e8f3);
 }
+.chat-tab .tab-title::before{
+    background: linear-gradient(45deg, #c0f6f4, #f8b5a5);
+}
 
 .tab-title:hover::before{
  transform: scale(1.12);
@@ -62,7 +74,10 @@
 
 }
 
+//change the borderstyle on selected tab
 .tab.selected .tab-title::before{
     border-radius: 50px;
+    transform: scale(1.12);
+    opacity: 0.9;
 }
 
