@@ -1,0 +1,38 @@
+.todo-wrapper{
+    overflow-y: auto;
+    height: 100%;
+    margin: 20px;
+}
+
+.todo-item{
+    display: flex;
+    background-color: rgba(white, 0.2);
+    backdrop-filter: blur(2px);
+    
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow:  0px 1px 2px rgb(black, 0.1);
+    padding: 10px 12px;
+    align-items: center;
+}
+
+.todo-text{
+    color: rgba(110, 110, 110, 0.788);
+   text-shadow: 0px 1px 3px rgb(black, 0.1);
+   letter-spacing: 1px;
+   
+}
+
+.check-box{
+    display: flex;
+    padding: 5px;
+    border: 2px solid rgba(71, 71, 71, 0.2);
+    border-radius: 50%;
+    margin-right: 15px;
+
+    i{
+        font-size: 20px;
+        opacity: 0;
+    }
+}
+
