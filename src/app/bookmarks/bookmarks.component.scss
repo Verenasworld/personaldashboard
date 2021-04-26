@@ -1,19 +1,11 @@
 .bookmarks-wrapper {
     height: 100%;
+    margin-left: 20px;
     
 }
 
-.bookmark-title{
-
+.bookmark-titles-container{
     display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    background-color:rgba(white, 0.3);
-    width: 100px;
-    height: 100px;
-}
-
-.container{
-    max-width: 900px;
-    margin: auto;
 }
