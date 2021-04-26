@@ -98,10 +98,17 @@
 
     background-color: rgba(white, 0.75);
 
+    transition: all 0.2s;
+
+
+
     //hide the underline by default
     opacity: 0;
+    transform:scaleX(0);
     }
 
     .tab.selected::after{
         opacity: 1;
+        transform: scaleX(1);
+        transition-delay: 0.2s;
     }

@@ -1,12 +1,14 @@
 <div class="app-wrapper">
   <div class="top-section">
   
-  <h1>{{theDate | date:'HH:MM:SS'}}</h1>
-    <i class="material-icons-outlined">
-      light_mode
-    </i>
+  <h1 id="data">{{theDate | date:'HH:MM:SS'}}</h1>
+  <h2>{{ theDate | date }}</h2>
+   
+  <div>
+    <i class="material-icons-outlined"> light_mode</i>
     <h2>38°</h2>
-    <h2>{{ theDate | date }}</h2>
+  </div>
+
     </div>
   
   <div class="content-section">
