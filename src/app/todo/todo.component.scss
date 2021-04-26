@@ -19,7 +19,7 @@
 }
 
 .todo-text{
-    color: rgba(110, 110, 110, 0.8);
+    color: rgba(65, 65, 65, 0.7);
    // color: white;
    
    letter-spacing: 1px;
@@ -42,8 +42,9 @@
 
 
 .todo-item:hover{
+    background-color:rgba(white, 0.5);
     .todo-text{
-        color: rgba(110, 110, 110, 0.99);
+        color: rgba(65, 65, 65, 0.8);
        // color: rgba(white, 0.8);
     }
     .check-box{
