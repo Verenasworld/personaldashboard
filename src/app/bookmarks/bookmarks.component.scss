@@ -1,6 +1,7 @@
 .bookmarks-wrapper {
     height: 100%;
     margin-left: 20px;
+    overflow-y: auto;
     
 }
 
@@ -8,4 +9,5 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
