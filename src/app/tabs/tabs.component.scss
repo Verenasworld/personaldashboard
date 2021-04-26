@@ -1,16 +1,114 @@
 .tabs{
     display: flex;
-    padding: 10px;
     background-color: rgba(white, 0.25);
+    backdrop-filter: blur(2px);
     border-radius: 12px;
     gap: 14px;
-    .tab-title{
-        display: flex;
-        padding: 16px;
-        background: rgba(black, 0.1);
-        cursor: pointer;
-        i{
-            columns: #222;
-        }
+    padding: 10px;
+    margin: 12px;
+    margin-top: 50px;
+
+    .tab{
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
     }
+
+
+    .tab-title{
+        display: flexgit push --set-upstream origin tabs;
+        padding: 16px;
+        cursor: pointer;
+    
+        i{
+            color: #222;
+            
+
+        }
+
+        transition: all 0.2s ease-in;
+    }
+    .tab.selected .tab-title{
+        transform: translateY(-40px);
+        
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0, 0, 0, 2);
+    }
+
+
 }
+
+
+//  style background shape 
+.tab-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.7 ;
+
+  
+}
+
+.bookmark-tab .tab-title::before{
+    background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
+}
+
+.todo-tab .tab-title::before{
+    background: linear-gradient(45deg, #a2c6ff, #ffbdde);
+}
+
+.notes-tab .tab-title::before{
+    background: linear-gradient(45deg, #d2cdff, #a7e8f3);
+}
+.chat-tab .tab-title::before{
+    background: linear-gradient(45deg, #c0f6f4, #f8b5a5);
+}
+
+.tab-title:hover::before{
+ transform: scale(1.12);
+ opacity: 0.9;
+
+}
+
+//change the borderstyle on selected tab
+.tab.selected .tab-title::before{
+    border-radius: 50px;
+    transform: scale(1.12);
+    opacity: 0.9;
+    box-shadow: 0px 7px 17px rgba(black, 0.2);
+}
+
+// the underline on tab selected
+
+.tab::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 50%;
+    margin: auto;
+
+    background-color: rgba(white, 0.75);
+
+    transition: all 0.2s;
+
+
+
+    //hide the underline by default
+    opacity: 0;
+    transform:scaleX(0);
+    }
+
+    .tab.selected::after{
+        opacity: 1;
+        transform: scaleX(1);
+        transition-delay: 0.2s;
+    }
