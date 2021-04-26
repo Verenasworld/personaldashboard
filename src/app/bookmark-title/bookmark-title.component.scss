@@ -20,6 +20,7 @@
     &:hover{
         background-color:rgba(white, 0.5);
         backdrop-filter: blur(2px);
+      
     }
 
     &:active{
@@ -34,7 +35,7 @@
 }
 
 .title-text{
-    color: rgba(white, 0.90);
+    color: rgba(110, 110, 110, 0.90); 
     font-size: 15px;
     max-width: 100%;
     overflow: hidden;
