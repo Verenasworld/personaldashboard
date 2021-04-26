@@ -15,11 +15,16 @@ html, body{
 }
 
 h1{
-    font-size: 30em;
+    font-size: 100px;
 
 }
 
 h2{
     font-size: 40px;
     
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
 }
