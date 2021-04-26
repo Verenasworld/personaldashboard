@@ -15,7 +15,9 @@
     height: 110px;
     cursor: pointer;
 
-    transition: all 0.1s;
+    transition: all 0.2s;
+
+    backdrop-filter: blur(0.5px);
 
     &:hover{
         background-color:rgba(white, 0.5);
