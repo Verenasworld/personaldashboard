@@ -6,10 +6,10 @@ import { NotesComponent } from './notes/notes.component';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
-  {path: 'bookmarks', component: BookmarksComponent},
-  {path: 'notes', component: NotesComponent},
-  {path: 'todo', component: TodoComponent},
-  {path: 'chat', component: ChatComponent},
+  {path: 'bookmarks', component: BookmarksComponent, data:{ tabNum: 0}},
+  {path: 'notes', component: NotesComponent, data:{ tabNum: 2}},
+  {path: 'todo', component: TodoComponent, data:{ tabNum: 1}},
+  {path: 'chat', component: ChatComponent, data:{ tabNum: 3}},
 
 ];
 
