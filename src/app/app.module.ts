@@ -10,6 +10,7 @@ import { NotesComponent } from './notes/notes.component';
 import { TodoComponent } from './todo/todo.component';
 import { ChatComponent } from './chat/chat.component';
 import { BookmarkTitleComponent } from './bookmark-title/bookmark-title.component';
+import { AddNoteComponent } from './add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BookmarkTitleComponent } from './bookmark-title/bookmark-title.componen
     NotesComponent,
     TodoComponent,
     ChatComponent,
-    BookmarkTitleComponent
+    BookmarkTitleComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,

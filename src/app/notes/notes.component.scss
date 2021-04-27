@@ -1,4 +1,4 @@
-.todo-wrapper{
+.notes-wrapper{
     height: 100%;
     margin: 20px;
     overflow-y: auto;
@@ -43,13 +43,9 @@
         background-color:rgba(white, 0.5);
         backdrop-filter: blur(2px);
     }
-}
-
-.btns-container {
-    display: flex;
-    margin-top: 20px;
-
-    &.btns-centered {
-        justify-content: center;
+    &:active{
+        background-color:rgba(white, 0.7); 
     }
 }
+
+

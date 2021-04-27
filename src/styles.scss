@@ -28,3 +28,17 @@ h2{
     max-width: 900px;
     margin: auto;
 }
+
+.btns-container {
+    display: flex;
+    
+
+    &.btns-centered {
+        justify-content: center;
+    }
+}
+
+.has-blurred-white-bg{
+    background-color:rgba(white, 0.5);
+    backdrop-filter: blur(2px);
+}
