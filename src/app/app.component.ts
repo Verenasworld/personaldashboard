@@ -9,7 +9,9 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('routeAnim',[])
+    trigger('routeAnim',[
+
+    ])
   ]
 })
 
@@ -19,7 +21,10 @@ export class AppComponent {
 
   theDate = new Date();
 
+
+  //observable
   prepareRoute(outlet: RouterOutlet){
+    if (outlet.isActivated) 
     return outlet.activatedRoute.snapshot.url
   }
 
