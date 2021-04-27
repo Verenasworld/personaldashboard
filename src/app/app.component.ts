@@ -11,13 +11,29 @@ import { RouterOutlet } from '@angular/router';
   animations: [
     trigger('routeAnim',[
         transition('* => *', [
+          query(':enter',[ 
+            style({ opacity: 0 })
+         ],{optional: true}),
+       
+          query(':leave',[
+            style({
+              display: 'block'
+            }),
+            animate(100, style({
+              opacity: 0
+            }))
+          ], {optional: true}),
+         
           query(':enter', [
             style({
               opacity: 0,
               display: 'block',
+              height: '100%'
             }),
-            animate(1000)
-          ])
+            animate(1000, style({
+              opacity: 1 
+            }))
+          ], { optional: true })
         ])
     ])
   ]
