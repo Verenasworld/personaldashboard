@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,20 @@ import { RouterOutlet } from '@angular/router';
   animations: [
     trigger('routeAnim',[
         transition('* => *', [
+          style({
+            position: 'relative'
+          }),
+
+          query(':enter, :leave' ,[
+            style({
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%'
+            })
+
+          ],{optional: true}),
+
           query(':enter',[ 
             style({ opacity: 0 })
          ],{optional: true}),
