@@ -32,18 +32,18 @@ import { RouterOutlet } from '@angular/router';
     
          group([
           query(':leave',[
-            animate('300ms ease-in', style({
+            animate('400ms ease-in', style({
               opacity: 0,
-              transform: 'translateX(100px)',
+              transform: 'translateX(80px)',
             }))
           ], {optional: true}),
          
           query(':enter', [
             style({
               opacity:0,
-              transform: 'translateX(-100px)'
+              transform: 'translateX(-80px)'
             }),
-            animate(500, style({
+            animate('400ms 120ms ease-out', style({
               opacity: 1 ,
               transform: 'translateX(0)'
             
@@ -73,18 +73,18 @@ import { RouterOutlet } from '@angular/router';
     
          group([
           query(':leave',[
-            animate('300ms ease-in', style({
+            animate('400ms ease-in', style({
               opacity: 0,
-              transform: 'translateX(-100px)',
+              transform: 'translateX(-80px)',
             }))
           ], {optional: true}),
          
           query(':enter', [
             style({
               opacity:0,
-              transform: 'translateX(100px)'
+              transform: 'translateX(80px)'
             }),
-            animate(500, style({
+            animate('400ms 120ms ease-out', style({
               opacity: 1 ,
               transform: 'translateX(0)'
             
