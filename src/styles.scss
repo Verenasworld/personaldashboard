@@ -24,6 +24,12 @@ h2{
     
 }
 
+h1.is-bold,
+h2.is-bold{
+    font-weight: bold;
+    
+}
+
 .container{
     max-width: 900px;
     margin: auto;
