@@ -12,6 +12,8 @@ import { ChatComponent } from './chat/chat.component';
 import { BookmarkTitleComponent } from './bookmark-title/bookmark-title.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,10 @@ import { AddNoteComponent } from './add-note/add-note.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
