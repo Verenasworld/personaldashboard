@@ -1,4 +1,4 @@
-import { trigger } from '@angular/animations';
+import { style, transition, trigger , animate , query } from '@angular/animations';
 import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router';
 
@@ -10,7 +10,22 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeAnim',[
-
+        transition('* => *', [
+          query(':enter', [
+            style({
+              background: 'wheat',
+              display: 'block'
+            })
+          ], {
+            optional:true
+          }),
+          style(
+            {
+              background: 'blue' 
+            }
+          ),
+          animate(1000)
+        ])
     ])
   ]
 })
@@ -24,7 +39,7 @@ export class AppComponent {
 
   //observable
   prepareRoute(outlet: RouterOutlet){
-    if (outlet.isActivated) 
+    if (outlet.isActivated) {}
     return outlet.activatedRoute.snapshot.url
   }
 
