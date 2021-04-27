@@ -18,22 +18,21 @@ import { RouterOutlet } from '@angular/router';
 
           query(':enter, :leave' ,[
             style({
+              //display: 'block',
               position: 'absolute',
               top: 0,
               left: 0,
-              width: '100%'
+              width: '100%',
+              height: '100%'
             })
 
           ],{optional: true}),
 
           query(':enter',[ 
-            style({ opacity: 0 })
+            style({ opacity: 0 ,height: '100%'})
          ],{optional: true}),
        
           query(':leave',[
-            style({
-              display: 'block'
-            }),
             animate(100, style({
               opacity: 0
             }))
@@ -42,8 +41,6 @@ import { RouterOutlet } from '@angular/router';
           query(':enter', [
             style({
               opacity: 0,
-              display: 'block',
-              height: '100%'
             }),
             animate(1000, style({
               opacity: 1 
