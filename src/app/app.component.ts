@@ -13,18 +13,11 @@ import { RouterOutlet } from '@angular/router';
         transition('* => *', [
           query(':enter', [
             style({
-              background: 'wheat',
-              display: 'block'
-            })
-          ], {
-            optional:true
-          }),
-          style(
-            {
-              background: 'blue' 
-            }
-          ),
-          animate(1000)
+              opacity: 0,
+              display: 'block',
+            }),
+            animate(1000)
+          ])
         ])
     ])
   ]
