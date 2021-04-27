@@ -1,4 +1,4 @@
-import { style, transition, trigger , animate , query } from '@angular/animations';
+import { style, transition, trigger , animate , query ,group } from '@angular/animations';
 import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router';
 
@@ -11,14 +11,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeAnim',[
-        transition('* => *', [
+        transition('0 -> 1', [
           style({
-            position: 'relative'
+            position: 'relative',
+            overflow: 'hidden'
           }),
 
           query(':enter, :leave' ,[
             style({
-              //display: 'block',
+
               position: 'absolute',
               top: 0,
               left: 0,
@@ -28,24 +29,28 @@ import { RouterOutlet } from '@angular/router';
 
           ],{optional: true}),
 
-          query(':enter',[ 
-            style({ opacity: 0 ,height: '100%'})
-         ],{optional: true}),
-       
+    
+         group([
           query(':leave',[
-            animate(100, style({
-              opacity: 0
+            animate('300ms ease-in', style({
+              opacity: 0,
+              transform: 'translateX(-100px)',
             }))
           ], {optional: true}),
          
           query(':enter', [
             style({
-              opacity: 0,
+              opacity:0,
+              transform: 'translateX(100px)'
             }),
-            animate(1000, style({
-              opacity: 1 
+            animate(500, style({
+              opacity: 1 ,
+              transform: 'translateX(0)'
+            
             }))
           ], { optional: true })
+         ])
+         
         ])
     ])
   ]
@@ -61,7 +66,7 @@ export class AppComponent {
   //observable
   prepareRoute(outlet: RouterOutlet){
     if (outlet.isActivated) {}
-    return outlet.activatedRoute.snapshot.url
+    return outlet.activatedRouteData['tabNum']
   }
 
 }
