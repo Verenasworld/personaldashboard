@@ -43,7 +43,7 @@ import { RouterOutlet } from '@angular/router';
               opacity:0,
               transform: 'translateX(-80px)'
             }),
-            animate('400ms 120ms ease-outgit push', style({
+            animate('400ms 120ms ease-out', style({
               opacity: 1 ,
               transform: 'translateX(0)'
             
