@@ -6,9 +6,11 @@ import { Note } from './note.model';
 })
 export class NoteService {
 
-  notes: Note[]
 
-  constructor() { }
+
+  constructor(public notes: Note[]) {
+    
+   }
 
   getNotes(){
     return this.notes
@@ -25,5 +27,9 @@ export class NoteService {
 
   addNote(note: Note){
     this.notes.push(note)
+  }
+
+  updateNote(id: string){
+
   }
 }
