@@ -22,4 +22,8 @@ export class NoteService {
   getNote(id: string) {
      return this.notes.find(n => n.id === id)
   }
+
+  addNote(note: Note){
+    this.notes.push(note)
+  }
 }
