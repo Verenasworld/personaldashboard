@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-note',
@@ -11,7 +12,7 @@ export class AddNoteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onFormSubmit(){
-    alert("form has been submitted")
+  onFormSubmit( form: NgForm){
+    console.log(form)
   }
 }

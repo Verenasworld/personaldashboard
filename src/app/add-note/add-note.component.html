@@ -2,13 +2,13 @@
    
     <h2 class="is-bold">New Note </h2>
 
-      <form (ngSubmit)="onFormSubmit()">
-       <input class="textbox" type="text" placeholder="enter note title ...">
-       <textarea class="texarea" placeholder="enter note content ..."></textarea>
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+       <input class="textbox" ngModel name="title" type="text" placeholder="enter note title ...">
+       <textarea class="texarea" ngModel name="content" placeholder="enter note content ..."></textarea>
 
        <div class="btns-container">
         <a routerLink ="../" class="btn"> Cancel</a>
-        <button class="btn align-end"> + Create Note</button>
+        <button type="submit" class="btn align-end"> + Create Note</button>
        </div>
 
       </form>
