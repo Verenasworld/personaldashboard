@@ -11,5 +11,7 @@ export class AddNoteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onFormSubmit(){
+    alert("form has been submitted")
+  }
 }
