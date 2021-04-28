@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Note } from '../shared/note.model';
+import { NoteService } from '../shared/note.service';
 
 @Component({
   selector: 'app-add-note',
@@ -8,11 +10,15 @@ import { NgForm } from '@angular/forms';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
   }
   onFormSubmit( form: NgForm){
-    console.log(form)
+    //create new note object and pass in title & content 
+    const note = new Note(form.value.title, form.value.content)
+    console.log(note)
+
+    this.noteService.addNote(note)
   }
 }
