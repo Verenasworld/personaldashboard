@@ -5,10 +5,10 @@ import { Note } from './note.model';
   providedIn: 'root'
 })
 export class NoteService {
+  notes: Note[] = []
 
 
-
-  constructor(public notes: Note[]) {
+  constructor() {
 
    }
 
