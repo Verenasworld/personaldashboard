@@ -35,4 +35,11 @@ export class NoteService {
   }
 
   //Die Methode Object.assign() kopiert die Werte aller aufzählbaren, eigenen Eigenschaften von einem oder mehreren Quellobjekten in ein Zielobjekt. Es wird das Zielobjekt zurückgegeben.
+
+deleteNote(id:string){
+ const noteIndex = this.notes.findIndex(n => n.id === id )
+ this.notes.splice(noteIndex, 1)
+}
+//find the index of notes 
+
 }
