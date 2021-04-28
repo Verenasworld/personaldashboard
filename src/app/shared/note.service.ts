@@ -38,8 +38,10 @@ export class NoteService {
 
 deleteNote(id:string){
  const noteIndex = this.notes.findIndex(n => n.id === id )
+ if(noteIndex == -1) return
  this.notes.splice(noteIndex, 1)
 }
-//find the index of notes 
-
+//find the index of notes which has the id in the array 
+//Die Methode findIndex() gibt den Index des ersten Elements im Array zurück, das die bereitgestellte Testfunktion erfüllt. Andernfalls wird -1 zurückgegeben, um anzuzeigen, dass kein Element den Test bestanden hat.
+// slice()Method changes the content of an array by removing existing elements and / or adding new elements.
 }
