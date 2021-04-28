@@ -9,7 +9,7 @@ export class NoteService {
 
 
   constructor(public notes: Note[]) {
-    
+
    }
 
   getNotes(){
@@ -29,7 +29,10 @@ export class NoteService {
     this.notes.push(note)
   }
 
-  updateNote(id: string){
-
+  updateNote(id: string, updatedFields: Partial<Note>){
+    const note = this.getNote(id)
+    Object.assign(note, updatedFields)
   }
+
+  //Die Methode Object.assign() kopiert die Werte aller aufzählbaren, eigenen Eigenschaften von einem oder mehreren Quellobjekten in ein Zielobjekt. Es wird das Zielobjekt zurückgegeben.
 }
