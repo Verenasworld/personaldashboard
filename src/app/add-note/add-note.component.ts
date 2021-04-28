@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Note } from '../shared/note.model';
 import { NoteService } from '../shared/note.service';
 
@@ -10,7 +11,7 @@ import { NoteService } from '../shared/note.service';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor(private noteService: NoteService) { }
+  constructor(private noteService: NoteService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +21,8 @@ export class AddNoteComponent implements OnInit {
     console.log(note)
 
     this.noteService.addNote(note)
+
+    //navigate the userd back to the notes view when create new Notes
+    this.router.navigateByUrl("/notes")
   }
 }
