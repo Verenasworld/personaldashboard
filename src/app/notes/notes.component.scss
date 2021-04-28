@@ -4,36 +4,6 @@
     overflow-y: auto;
 }
 
-.note-card{
-    background-color: rgba(white, 0.3);
-    color: rgba(65, 65, 65, 0.99);
-    height: 100%;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    backdrop-filter: blur(0.5px);
-
-    transition: all 0.2s;
-
-    &:hover{
-        background-color:rgba(white, 0.5);
-        backdrop-filter: blur(2px);
-    }
-}
-
-.note-card-title{
-    margin-top: 7px;
-    font-weight: 100;
-    font-size: 25px;
-    letter-spacing: 1px;
-}
-
-.note-card-content{
-    font-size: 15px;
-    letter-spacing: 1px;
-   margin-top: 5px;
-}
 
 
 
