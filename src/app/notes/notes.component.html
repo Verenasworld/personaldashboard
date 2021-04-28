@@ -1,17 +1,11 @@
 <div class="notes-wrapper">
     <div class="container">
         <div class="notes-list">
-            <div class="note-card" *ngFor= "let note of notes">
-                <div class="note-card-title">hallo 
-                </div>
-                <div class="note-card-content">content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quia laudantium cumque esse facere, cupiditate pariatur tempore corporis ea iste ipsum non vel consequuntur rem voluptatem quidem enim aut tenetur!
-
-                </div>
-            </div>
+           <app-note-card *ngFor="let note of notes" [note] = "note"></app-note-card>
            
-            <div class="btns-container btns-centered">
-                <a routerLink="add" class="btn"> + Add</a>
-            </div>
-            </div>
+         <div class="btns-container btns-centered">
+            <a routerLink="add" class="btn"> + Add</a>
+         </div>
+      </div>
     </div>
 </div>

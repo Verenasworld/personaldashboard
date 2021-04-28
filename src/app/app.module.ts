@@ -11,6 +11,7 @@ import { TodoComponent } from './todo/todo.component';
 import { ChatComponent } from './chat/chat.component';
 import { BookmarkTitleComponent } from './bookmark-title/bookmark-title.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { NoteCardComponent } from './note-card/note-card.component';
 
 
 
@@ -23,7 +24,8 @@ import { AddNoteComponent } from './add-note/add-note.component';
     TodoComponent,
     ChatComponent,
     BookmarkTitleComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    NoteCardComponent
   ],
   imports: [
     BrowserModule,
