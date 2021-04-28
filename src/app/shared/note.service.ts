@@ -8,7 +8,7 @@ export class NoteService {
   notes: Note[] = [
     
       new Note( 'test title' , 'testcontent!'),
-      new Note( 'test title' , 'testcontent!')
+     
     
   ]
 
