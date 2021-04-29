@@ -13,6 +13,7 @@ import { BookmarkTitleComponent } from './bookmark-title/bookmark-title.componen
 import { AddNoteComponent } from './add-note/add-note.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 
 
@@ -32,7 +33,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
+    
 
     
     

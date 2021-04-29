@@ -16,10 +16,11 @@ export class AddNoteComponent implements OnInit {
   ngOnInit(): void {
   }
   onFormSubmit( form: NgForm){
+    console.log(form)
+  
+    if(form.invalid) return alert ("form is invalid")
     //create new note object and pass in title & content 
     const note = new Note(form.value.title, form.value.content)
-    console.log(note)
-
     this.noteService.addNote(note)
 
     //navigate the userd back to the notes view when create new Notes
