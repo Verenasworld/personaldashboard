@@ -3,7 +3,7 @@
     <h2 class="is-bold">New Note </h2>
 
       <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
-       <input class="textbox" ngModel name="title" type="text" placeholder="enter note title ...">
+       <input class="textbox" ngModel name="title" type="text" placeholder="enter note title ..." required>
        <textarea class="texarea" ngModel name="content" placeholder="enter note content ..."></textarea>
 
        <div class="btns-container">
