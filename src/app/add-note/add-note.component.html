@@ -6,7 +6,7 @@
       
       <div class="form-field">
         <input class="textbox" ngModel #titleField="ngModel" name="title" type="text" placeholder="enter note title ..." required minlength="5" maxlength="40">
-        <ng-container *ngIf="titleField.invalid">
+        <ng-container *ngIf="showValidationErrors && titleField.invalid">
           <p *ngIf="titleField.errors?.required">Please enter a note title</p>
           <p *ngIf="titleField.errors?.minlength">Title must be a least 5 charakter</p>
         </ng-container>
