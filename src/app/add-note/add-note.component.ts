@@ -12,14 +12,19 @@ import { NoteService } from '../shared/note.service';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor(private noteService: NoteService, private router: Router) { }
+  showValidationErrors: boolean = false
 
+  constructor(private noteService: NoteService, private router: Router) {
+   
+   }
+  
   ngOnInit(): void {
   }
   onFormSubmit( form: NgForm){
     console.log(form)
   
-    if(form.invalid) return alert ("form is invalid",)
+    if(form.invalid) return this.showValidationErrors = true
+    
     
     //create new note object and pass in title & content 
     const note = new Note(form.value.title, form.value.content)
@@ -27,5 +32,6 @@ export class AddNoteComponent implements OnInit {
 
     //navigate the userd back to the notes view when create new Notes
     this.router.navigateByUrl("/notes")
+    return
   }
 }
