@@ -1,1 +1,25 @@
-<p>edit-note works!</p>
+<div class="edit-note-wrapper container has-blurred-white-bg">
+   
+    <h2 class="is-bold">Edit Note </h2>
+
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+      
+      <div class="form-field">
+        <input class="textbox" ngModel #titleField="ngModel" name="title" type="text" placeholder="enter note title ..." required minlength="5" maxlength="40">
+        <ng-container *ngIf="titleField.invalid">
+          <p *ngIf="titleField.errors?.required">Please enter a note title</p>
+          <p *ngIf="titleField.errors?.minlength">Title must be a least 5 charakter</p>
+        </ng-container>
+      </div>
+     <div class="textarea">
+      <textarea class="texarea" ngModel name="content" placeholder="enter note content ..."></textarea>
+     </div>
+
+       <div class="btns-container">
+        <a routerLink ="../" class="btn"> Cancel</a>
+        <button type="submit" class="btn align-end">Save</button>
+       </div>
+
+      </form>
+
+</div>

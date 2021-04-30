@@ -1,5 +1,9 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute , ParamMap } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute , ParamMap, Router } from '@angular/router';
+import { Note } from '../shared/note.model';
+import { NoteService } from '../shared/note.service';
 
 @Component({
   selector: 'app-edit-note',
@@ -8,14 +12,24 @@ import { ActivatedRoute , ParamMap } from '@angular/router';
 })
 export class EditNoteComponent implements OnInit {
 
-  constructor( private route: ActivatedRoute) { }
+  note!: Note;
+
+  constructor( private route: ActivatedRoute,private router: Router, private noteService: NoteService) { }
 
   ngOnInit(): void {
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       const idParam = paramMap.get('id')
+      console.log(idParam + 'hier')
+      
+     
 
     })
   }
+  onFormSubmit(form: NgForm) {
+    this.noteService.updateNote(this.note.id, form.value)
+    this.router.navigateByUrl("/notes")
+  }
+
 
 }

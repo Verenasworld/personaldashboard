@@ -36,4 +36,5 @@ export class AddNoteComponent implements OnInit {
     this.router.navigateByUrl("/notes")
     return
   }
-}
+
+  }
