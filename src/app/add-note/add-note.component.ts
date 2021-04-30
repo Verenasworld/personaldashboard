@@ -20,6 +20,8 @@ export class AddNoteComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  
   onFormSubmit( form: NgForm){
     console.log(form)
   
