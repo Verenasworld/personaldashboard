@@ -12,22 +12,22 @@ import { NoteService } from '../shared/note.service';
 })
 export class EditNoteComponent implements OnInit {
 
-  note!: Note;
 
-  constructor( private route: ActivatedRoute,private router: Router, private noteService: NoteService) { }
-
+  constructor(  private route: ActivatedRoute,
+                private router: Router, 
+                private noteService: NoteService) { }
   ngOnInit(): void {
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      const idParam = paramMap.get('id')
-      console.log(idParam + 'hier')
       
-     
-
+      const idParam = paramMap?.get('id')
+      console.log("HALLLOOOO ", idParam)
+      const note = this.noteService.getNote(idParam!)
+      console.log("NOTE ", note)
     })
   }
   onFormSubmit(form: NgForm) {
-    this.noteService.updateNote(this.note.id, form.value)
+    //this.noteService.updateNote(this.note.id, form.value)
     this.router.navigateByUrl("/notes")
   }
 
