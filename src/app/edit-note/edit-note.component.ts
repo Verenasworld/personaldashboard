@@ -12,7 +12,7 @@ import { NoteService } from '../shared/note.service';
 })
 export class EditNoteComponent implements OnInit {
 
-  note = typeof Note;
+  note: Note | undefined;
 
 
   constructor(  private route: ActivatedRoute,
@@ -29,14 +29,10 @@ export class EditNoteComponent implements OnInit {
       //return
       // if (typeof Note !== "undefined")
         this.note = this.noteService.getNote(idParam!)
-  
-      
-      
-      
-    })
+  })
   }
   onFormSubmit(form: NgForm) {
-    this.noteService.updateNote(this.note.id, form.value)
+    this.noteService.updateNote(this.note!.id, form.value)
     this.router.navigateByUrl("/notes")
   }
 
