@@ -2,7 +2,9 @@
    
     <h2 class="is-bold">Edit Note </h2>
 
-      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <p *ngIf="!note">Note not found, Please add a new note</p>
+
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" *ngIf= note>
       
       <div class="form-field">
         <input class="textbox" [ngModel]="note!.title" #titleField="ngModel" name="title" type="text" placeholder="enter note title ..." required minlength="5" maxlength="40">
@@ -17,7 +19,9 @@
 
        <div class="btns-container">
         <a routerLink ="../" class="btn"> Cancel</a>
+        <button type="button" class ="btn" (click)="deleteNote()">Delete</button>
         <button type="submit" class="btn align-end">Save</button>
+      
        </div>
 
       </form>
