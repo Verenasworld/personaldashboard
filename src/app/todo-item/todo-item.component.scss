@@ -71,18 +71,34 @@
 .todo-item-actions{
     position: absolute;
     right: 5px;
-    
-    
-  
+    //hide by defoult 
+
+    visibility: hidden;   
     
 }
 .todo-item-action-btn{
     background: transparent;
-    border-radius: 5px;
-   
-    
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+
+    &:first-child{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &:last-child{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
 
 .todo-item-actions i{
     font-size: 18px;
+}
+
+.todo-text{
+    margin-right: 110px;
+}
+
+.todo-item:hover .todo-item-actions{
+visibility: visible;
 }
