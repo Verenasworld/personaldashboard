@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { CalenderComponent } from './calender/calender.component';
 import { ChatComponent } from './chat/chat.component';
 import { EditNoteComponent } from './edit-note/edit-note.component';
 import { NotesComponent } from './notes/notes.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'notes/add', component: AddNoteComponent},
   {path: 'notes/:id', component: EditNoteComponent},
   {path: 'chat', component: ChatComponent, data:{ tabNum: 3}},
+  {path: 'calender', component: CalenderComponent, data:{ tabNum: 4}},
   
 
 

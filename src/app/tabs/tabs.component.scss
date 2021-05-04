@@ -69,6 +69,10 @@
 .chat-tab .tab-title::before{
     background: linear-gradient(45deg, #c0f6f4, #f8b5a5);
 }
+.calender-tab .tab-title::before{
+    background: linear-gradient(45deg, #e2d2fd, #f8b5a5);
+}
+
 
 .tab-title:hover::before{
  transform: scale(1.12);

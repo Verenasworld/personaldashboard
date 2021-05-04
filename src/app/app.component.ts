@@ -116,7 +116,5 @@ export class AppComponent implements OnInit {
     },1000)
 
   }
-  updateDate(theDate : Date){
-
-  }
+  
 }

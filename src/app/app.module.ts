@@ -17,6 +17,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { EditNoteComponent } from './edit-note/edit-note.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { CalenderComponent } from './calender/calender.component';
 
 
 
@@ -33,7 +34,8 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
     NoteCardComponent,
     EditNoteComponent,
     TodoItemComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,
