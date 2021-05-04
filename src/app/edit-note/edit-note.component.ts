@@ -12,7 +12,7 @@ import { NoteService } from '../shared/note.service';
 })
 export class EditNoteComponent implements OnInit {
 
-  public note!: Note;
+  note = typeof Note;
 
 
   constructor(  private route: ActivatedRoute,
@@ -25,15 +25,18 @@ export class EditNoteComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
   
       const idParam = paramMap?.get('id')
-      if (idParam == null || undefined )
-      return
-      this.note = this.noteService.getNote(idParam)
-      console.log(note)
+      //if (idParam == null || undefined )
+      //return
+      // if (typeof Note !== "undefined")
+        this.note = this.noteService.getNote(idParam!)
+  
+      
+      
       
     })
   }
   onFormSubmit(form: NgForm) {
-    this.noteService.updateNote(this.note.id, form.value)
+    //this.noteService.updateNote(this.note.id, form.value)
     //this.router.navigateByUrl("/notes")
   }
 
