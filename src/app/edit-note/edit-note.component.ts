@@ -19,16 +19,18 @@ export class EditNoteComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      
+  
       const idParam = paramMap?.get('id')
+      if (idParam == null )
+      return
       console.log("HALLLOOOO ", idParam)
-      const note = this.noteService.getNote(idParam!)
+      const note = this.noteService.getNote(idParam)
       console.log("NOTE ", note)
     })
   }
   onFormSubmit(form: NgForm) {
     //this.noteService.updateNote(this.note.id, form.value)
-    this.router.navigateByUrl("/notes")
+    //this.router.navigateByUrl("/notes")
   }
 
 
