@@ -14,6 +14,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { EditNoteComponent } from './edit-note/edit-note.component';
 
 
 
@@ -27,7 +28,8 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     ChatComponent,
     BookmarkTitleComponent,
     AddNoteComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    EditNoteComponent
   ],
   imports: [
     BrowserModule,
