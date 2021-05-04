@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { EditNoteComponent } from './edit-note/edit-note.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 
 
@@ -31,7 +32,8 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
     AddNoteComponent,
     NoteCardComponent,
     EditNoteComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
