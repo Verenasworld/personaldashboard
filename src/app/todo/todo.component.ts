@@ -19,4 +19,8 @@ export class TodoComponent implements OnInit {
     this.todos = this.todoService.getTodos()
   }
 
+  togggleCompleted(todo: Todo){
+    this.todoService.updateTodo(todo.id, {compledet: !todo.compledet})
+  }
+
 }
