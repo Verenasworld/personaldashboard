@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../shared/todo.model';
+import { TodoService } from '../shared/todo.service';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  todos: Todo[]
+
+  constructor(private todoService: TodoService) { 
+    this.todos = []
+  }
 
   ngOnInit(): void {
+    this.todos = this.todoService.getTodos()
+  }
+
+  togggleCompleted(todo: Todo){
+    this.todoService.updateTodo(todo.id, {compledet: !todo.compledet})
   }
 
 }

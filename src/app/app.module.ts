@@ -15,6 +15,7 @@ import { NoteCardComponent } from './note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { EditNoteComponent } from './edit-note/edit-note.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 
 
@@ -29,7 +30,8 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
     BookmarkTitleComponent,
     AddNoteComponent,
     NoteCardComponent,
-    EditNoteComponent
+    EditNoteComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
