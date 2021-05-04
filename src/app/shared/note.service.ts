@@ -16,7 +16,7 @@ export class NoteService {
     return this.notes
   }
 
-  // get Note return true when the (obkekt-id) n.id quals the id id passed into this    method
+  // get Note return true when the (object-id) n.id quals the id id passed into this    method
       //id matches the id passed in 
       // gibt true zurück , wenn die objekt id an diese Methode überebene ID - ID qualifiziert ? gleich ist ? 
       //one line error function (shorthand) 
@@ -42,6 +42,7 @@ deleteNote(id:string){
  this.notes.splice(noteIndex, 1)
 }
 //find the index of notes which has the id in the array 
+
 //Die Methode findIndex() gibt den Index des ersten Elements im Array zurück, das die bereitgestellte Testfunktion erfüllt. Andernfalls wird -1 zurückgegeben, um anzuzeigen, dass kein Element den Test bestanden hat.
-// slice()Method changes the content of an array by removing existing elements and / or adding new elements.
+// splice()Method changes the content of an array by removing existing elements and / or adding new elements.
 }
