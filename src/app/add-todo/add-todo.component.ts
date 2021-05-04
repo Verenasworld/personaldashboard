@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TodoService } from '../shared/todo.service';
 
 @Component({
   selector: 'app-add-todo',
@@ -9,13 +10,13 @@ import { NgForm } from '@angular/forms';
 export class AddTodoComponent implements OnInit {
   showValidationErrors: boolean = false
 
-  constructor() { }
+  constructor( private todoService: TodoService) { }
 
   ngOnInit(): void {
   }
 
 
   onFormSubmit(form: NgForm){
-
+    console.log(form)
   }
 }

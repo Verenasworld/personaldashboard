@@ -5,10 +5,10 @@
       <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
       
       <div class="form-field">
-        <input class="textbox" ngModel #textField="ngModel" name="text" type="text" placeholder="enter note title ..." required minlength="5" maxlength="40">
+        <input class="textbox" ngModel #textField="ngModel" name="text" type="text" placeholder="enter todo text ..." required minlength="5" maxlength="40">
         <ng-container *ngIf="showValidationErrors && textField.invalid">
-          <p *ngIf="textField.errors?.required">Please enter a note title</p>
-          <p *ngIf="textField.errors?.minlength">Title must be a least 5 charakter</p>
+          <p *ngIf="textField.errors?.required">Please enter some text for this todo</p>
+          <p *ngIf="textField.errors?.minlength"> te todo text must be a least 5 charakter</p>
         </ng-container>
       </div>
 
