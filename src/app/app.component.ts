@@ -1,5 +1,5 @@
 import { style, transition, trigger , animate , query ,group } from '@angular/animations';
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { RouterOutlet } from '@angular/router';
 
 
@@ -98,7 +98,7 @@ import { RouterOutlet } from '@angular/router';
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
 
   theDate = new Date();
@@ -110,4 +110,11 @@ export class AppComponent {
     return outlet.activatedRouteData['tabNum']
   }
 
+  ngOnInit(){
+    setInterval(()=>{
+       this.theDate = new Date()
+    },1000)
+
+  }
+  
 }
