@@ -7,7 +7,10 @@
        *ngFor="let todo of todos" 
        [todo]="todo" 
        (click)="togggleCompleted(todo)"
-       (editClick)="onEditClick(todo)">
+       (editClick)="onEditClick(todo)"
+       (deleteClick)="onDeleteClick(todo)"
+       >
+      
        
    </app-todo-item>
     <div class="btns-container btns-centered">

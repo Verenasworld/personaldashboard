@@ -10,14 +10,10 @@ export class TodoService {
     new Todo('this is a test'),
     new Todo( 'heyyyy')
   ]
-
-
   constructor() {
    
    }
-   
-
-
+  
   getTodos(){
     return this.todos
   }
@@ -37,7 +33,7 @@ updateTodo(id: string, updatedTodoFields: Partial<Todo> ){
   Object.assign(todo, updatedTodoFields)
   //Partial<Note> is an Utility Types,  TypeScript bietet verschiedene Dienstprogrammtypen, um allgemeine Typtransformationen zu ermöglichen. Konstruiert einen Typ mit allen Eigenschaften von Type auf optional. Dieses Dienstprogramm gibt einen Typ zurück, der alle Teilmengen eines bestimmten Typs darstellt.
 }
-deleteNote(id:string){
+deleteTodo(id:string){
   const todoIndex = this.todos.findIndex(t => t.id === id )
   if(todoIndex == -1) return
   this.todos.splice(todoIndex, 1)
