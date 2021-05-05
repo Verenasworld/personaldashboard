@@ -21,7 +21,7 @@ export class BookmarkService {
      return this.bookmarks.find(b => b.id === id)
    }
 
-   addBookmark(bookmark = Bookmark){
+   addBookmark(bookmark: Bookmark){
    this.bookmarks.push(bookmark)
    }
 
