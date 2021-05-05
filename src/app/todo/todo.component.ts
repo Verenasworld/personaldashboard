@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Todo } from '../shared/todo.model';
@@ -6,7 +7,17 @@ import { TodoService } from '../shared/todo.service';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss']
+  styleUrls: ['./todo.component.scss'],
+  animations: [
+    trigger('todoItemAnim', [
+      transition(':leave' ,[
+        animate(1000,style({
+          opacity: 0
+        }))
+      ])
+    ] )
+  ]
+
 })
 export class TodoComponent implements OnInit {
 
