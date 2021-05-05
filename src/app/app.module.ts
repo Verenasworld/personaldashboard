@@ -18,6 +18,7 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { CalenderComponent } from './calender/calender.component';
+import { EditTodoComponent } from './edit-todo/edit-todo.component';
 
 
 
@@ -35,7 +36,8 @@ import { CalenderComponent } from './calender/calender.component';
     EditNoteComponent,
     TodoItemComponent,
     AddTodoComponent,
-    CalenderComponent
+    CalenderComponent,
+    EditTodoComponent
   ],
   imports: [
     BrowserModule,

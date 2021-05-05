@@ -15,4 +15,8 @@ export class TodoItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  onEditClick(){
+    alert("edit was clicked")
+  }
 }
