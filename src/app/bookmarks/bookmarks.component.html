@@ -1,24 +1,7 @@
 <div class="bookmarks-wrapper">
    <div class="container">
     <div class="bookmark-titles-container">
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-    <app-bookmark-title></app-bookmark-title>
-
-    </div>
+    <app-bookmark-title *ngFor= "let bookmark of bookmarks" [bookmark]= "bookmark"></app-bookmark-title>
+   </div>
    </div>
 </div>
