@@ -11,8 +11,9 @@ import { TodoService } from '../shared/todo.service';
   animations: [
     trigger('todoItemAnim', [
       transition(':leave' ,[
-        animate(1000,style({
-          opacity: 0
+        animate(500,style({
+          opacity: 0,
+          height: 0
         }))
       ])
     ] )
@@ -43,5 +44,5 @@ export class TodoComponent implements OnInit {
     this.todoService.deleteTodo(todo.id)
   }
 
-  // i will push it in the master but its no working 
+ 
 }
