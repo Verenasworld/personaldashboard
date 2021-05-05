@@ -23,4 +23,9 @@ export class TodoComponent implements OnInit {
     this.todoService.updateTodo(todo.id, {compledet: !todo.compledet})
   }
 
+  onEditClick(todo: Todo){
+    alert( "hi i am in the todos component")
+
+  }
+
 }
