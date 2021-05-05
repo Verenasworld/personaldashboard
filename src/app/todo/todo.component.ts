@@ -42,4 +42,6 @@ export class TodoComponent implements OnInit {
   onDeleteClick(todo: Todo){
     this.todoService.deleteTodo(todo.id)
   }
+
+  // i will push it in the master but its no working 
 }
