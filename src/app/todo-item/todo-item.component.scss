@@ -1,7 +1,7 @@
 .todo-item{
    
     display: flex;
-    background-color: rgba(white, 0.3);
+    background-color: rgba(white, 0.5);
     backdrop-filter: blur(0.5px);
     
     border-radius: 5px;
@@ -38,22 +38,23 @@
 
 
 .todo-item:hover{
-    background-color:rgba(white, 0.2);
+    background-color:rgba(white, 0.4);
     backdrop-filter: blur(2px);
     .todo-text{
-        color: rgba(65, 65, 65, 0.8);
+        color: rgba(34, 34, 34, 0.8);
        // color: rgba(white, 0.8);
     }
     .check-box{
         border-color: transparent;
-        background-color:  rgba(228,190,223,0.2)
+        background-color:  rgba(255, 255, 255, 0.651)
     }
 }
 
 .todo-item.completed{
 
     .todo-text{
-         color: rgba(110, 110, 110, 0.90); 
+         color: rgba(99, 98, 98, 0.9); 
+         text-decoration: line-through;
     }
     .check-box{
         background-color: rgb(164, 226, 183);
