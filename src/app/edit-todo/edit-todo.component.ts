@@ -31,7 +31,8 @@ export class EditTodoComponent implements OnInit {
 
   
   onFormSubmit(form: NgForm){
-    if(form.invalid) return this.showValidationErrors = true
+    if(form.invalid) return this.showValidationErrors = true 
+    this.todoService.updateTodo(this.todo!.id, form.value)
     //create an todo object and use the todo service to add the todo
     this.router.navigateByUrl("/todo")
     return
