@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
@@ -13,6 +14,7 @@ import { TodoComponent } from './todo/todo.component';
 const routes: Routes = [
   {path: '', component: BookmarksComponent},
   {path: 'bookmarks', component: BookmarksComponent, data:{ tabNum: 0}},
+  {path: 'bookmarks/add', component: AddBookmarkComponent},
   {path: 'todo', component: TodoComponent, data:{ tabNum: 1}},
   {path: 'todo/add', component: AddTodoComponent},
   {path: 'todo/:id', component: EditTodoComponent},
