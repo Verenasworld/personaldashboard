@@ -3,10 +3,20 @@
    
     <h2 class="is-bold"> Edit Todo </h2>
 
-      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <p *ngIf="!todo">Todo not found</p>
+
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" *ngIf= "todo">
       
       <div class="form-field">
-        <input class="textbox" [ngModel]="todo?.text" #textField="ngModel" name="text" type="text" placeholder="enter todo text ..." required minlength="5" maxlength="100">
+        <input class="textbox" 
+             [ngModel]="todo?.text" 
+             #textField="ngModel" 
+             name="text" 
+             type="text" 
+             placeholder="enter todo text ..." 
+             required 
+             minlength="5" 
+              maxlength="70">
         <ng-container *ngIf="showValidationErrors && textField.invalid">
           <p *ngIf="textField.errors?.required">Please enter some text for this todo</p>
           <p *ngIf="textField.errors?.minlength"> the todo text must be at least 5 charakter</p>
