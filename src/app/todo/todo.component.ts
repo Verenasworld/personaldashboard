@@ -28,4 +28,7 @@ export class TodoComponent implements OnInit {
   this.router.navigate(["/todo" , todo.id])
   }
 
+  onDeleteClick(todo: Todo){
+    this.todoService.deleteTodo(todo.id)
+  }
 }
