@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Todo } from '../shared/todo.model';
 import { TodoService } from '../shared/todo.service';
 
@@ -11,7 +12,7 @@ export class TodoComponent implements OnInit {
 
   todos: Todo[]
 
-  constructor(private todoService: TodoService) { 
+  constructor(private todoService: TodoService, private router:Router) { 
     this.todos = []
   }
 
@@ -24,8 +25,7 @@ export class TodoComponent implements OnInit {
   }
 
   onEditClick(todo: Todo){
-    alert( "hi i am in the todos component")
-
+  this.router.navigate(["/todo" , todo.id])
   }
 
 }
