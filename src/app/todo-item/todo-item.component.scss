@@ -38,7 +38,7 @@
 
 
 .todo-item:hover{
-    background-color:rgba(white, 0.5);
+    background-color:rgba(white, 0.2);
     backdrop-filter: blur(2px);
     .todo-text{
         color: rgba(65, 65, 65, 0.8);
@@ -72,9 +72,10 @@
     position: absolute;
     right: 5px;
     //hide by defoult 
-
-    visibility: hidden;   
-    
+    transition: 0.5s;
+    visibility: hidden; 
+    opacity: 0;
+    transform: scale(0.6);
 }
 .todo-item-action-btn{
     background: transparent;
@@ -89,6 +90,9 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
+    &:hover {
+        background-color:rgba(white, 0.7);
+    }
 }
 
 .todo-item-actions i{
@@ -101,4 +105,9 @@
 
 .todo-item:hover .todo-item-actions{
 visibility: visible;
+transition-delay: 0.8;
+opacity: 1;
+transform: scale(1);
+
+
 }
