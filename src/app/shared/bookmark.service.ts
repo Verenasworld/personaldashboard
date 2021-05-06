@@ -6,19 +6,7 @@ import { Bookmark } from './bookmark.model';
 })
 export class BookmarkService {
   bookmarks: Bookmark[] = [
-    new Bookmark('updatet','https://www.wikipedia.org/'),
-    new Bookmark('test','https://www.google.com/'),
-    new Bookmark('test','https://www.youtube.com/'),
-    new Bookmark('githubkeksi','https://github.com/Verenasworld'),
-    new Bookmark('gmail','https://mail.google.com/mail/u/0/#inbox'),
-    new Bookmark('gmail','https://www.pinterest.at/'),
-    new Bookmark('updatet','https://www.wikipedia.org/'),
-    new Bookmark('test','https://www.google.com/'),
-    new Bookmark('test','https://www.youtube.com/'),
-    new Bookmark('githubkeksi','https://github.com/Verenasworld'),
-    new Bookmark('gmail','https://mail.google.com/mail/u/0/#inbox'),
-    new Bookmark('gmail','https://www.pinterest.at/'),
-   
+    
   ]
 
   constructor() {
