@@ -20,6 +20,7 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { CalenderComponent } from './calender/calender.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
+import { ManageBookmarksComponent } from './manage-bookmarks/manage-bookmarks.component';
 
 
 
@@ -39,7 +40,8 @@ import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
     AddTodoComponent,
     CalenderComponent,
     EditTodoComponent,
-    AddBookmarkComponent
+    AddBookmarkComponent,
+    ManageBookmarksComponent
   ],
   imports: [
     BrowserModule,
