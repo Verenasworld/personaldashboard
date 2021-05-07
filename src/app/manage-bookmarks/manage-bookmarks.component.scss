@@ -1,0 +1,48 @@
+.mange-bookmark-wrapper{
+   height: 60%;
+    display: flex;
+    margin-top: 20px;
+    overflow: hidden;
+    
+    
+}
+
+.sidebar{
+    
+    width: 200px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color:rgba(white, 0.8);
+    backdrop-filter: blur(5px);
+
+}
+
+.content{
+    flex-grow: 1;
+    background-color: burlywood;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(white, 0.5);
+backdrop-filter: blur(5px);
+
+}
+
+.sidebar-heading{
+    color: rgba(65, 65, 65, 0.99);
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 200;
+  
+}
+
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.sidebar-item{
+    color: rgba(65, 65, 65, 0.99);
+    padding: 15px 25px;
+}

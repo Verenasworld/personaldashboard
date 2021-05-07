@@ -4,11 +4,14 @@
     <app-bookmark-title *ngFor= "let bookmark of bookmarks" [bookmark]= "bookmark"></app-bookmark-title>
    </div>
    <div class="btns-container btns-centered">
-      <a routerLink="add" class="btn"> + Add</a>
+      <a routerLink="add" class="btn">
+         <span class="material-icons-outlined">
+            add </span> Add</a>
+      <a routerLink="manage" class="btn">
+         <span class="material-icons-outlined">
+            settings 
+            </span> Manage</a>
    </div>
-   <div class="btns-container btns-centered">
-      
-      <a routerLink="manage" class="btn">Settings</a>
-   </div>
+  
    </div>
 </div>
