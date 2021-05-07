@@ -15,7 +15,6 @@ import { NotesComponent } from './notes/notes.component';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
   {path: 'bookmarks', component: BookmarksComponent, data:{ tabNum: 0}},
   {path: 'bookmarks/add', component: AddBookmarkComponent},
   {path: 'bookmarks/manage', component: ManageBookmarksComponent, children:[
