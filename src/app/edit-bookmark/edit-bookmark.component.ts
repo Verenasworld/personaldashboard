@@ -13,7 +13,9 @@ export class EditBookmarkComponent implements OnInit {
 
   bookmark: Bookmark | undefined
 
-  constructor( private bookmarkService : BookmarkService, private route: ActivatedRoute, ) { }
+  constructor(
+      private bookmarkService : BookmarkService, 
+      private route: ActivatedRoute, ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap)=> {
@@ -23,7 +25,7 @@ export class EditBookmarkComponent implements OnInit {
   }
 
   onFormSubmit(form:NgForm){
-    console.log(form)
+   console.log(form.value)
   }
 
 }

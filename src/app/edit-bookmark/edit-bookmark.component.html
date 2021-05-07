@@ -5,7 +5,7 @@
         <div class="form-field">
             <label class="form-label"></label>
           <input class="textbox" 
-          [ngModel]="bookmark!.name"
+          [ngModel]="bookmark?.name"
            #textField="ngModel" 
            name="name" 
            type="text" 
@@ -17,7 +17,7 @@
   
         <div class="form-field">
           <input class="textbox" 
-          [ngModel]="bookmark!.url"
+          [ngModel]="[bookmark?.url]" 
            #textField="ngModel" 
            name="url" 
            type="url" 
