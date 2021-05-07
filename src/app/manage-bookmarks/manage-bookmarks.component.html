@@ -3,11 +3,7 @@
         <p class="sidebar-heading">My Links</p>
 
         <div class="sidebar-items">
-            <a href="" class="sidebar-item">item 1</a>
-            <a href="" class="sidebar-item">item 2</a>
-            <a href="" class="sidebar-item">item 3</a>
-            <a href="" class="sidebar-item">item 4</a>
-            <a href="" class="sidebar-item">item 4</a>
+            <a href="" class="sidebar-item" *ngFor="let bookmark of bookmarks">{{bookmark.name}}</a>
           
         </div>
 </div>
