@@ -1,8 +1,8 @@
 .mange-bookmark-wrapper{
-   height: 60%;
+   height: 70%;
     display: flex;
     margin-top: 20px;
-    overflow: hidden;
+  
     
     
 }
@@ -14,6 +14,7 @@
     border-bottom-left-radius: 5px;
     background-color:rgba(white, 0.8);
     backdrop-filter: blur(5px);
+    overflow: auto;
 
 }
 
@@ -24,6 +25,7 @@
     border-bottom-right-radius: 5px;
     background-color: rgba(white, 0.5);
 backdrop-filter: blur(5px);
+        overflow: auto;
 
 }
 
