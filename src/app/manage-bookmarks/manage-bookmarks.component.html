@@ -1,14 +1,15 @@
 <div class="mange-bookmark-wrapper container">
-<div class="sidebar">
-        <p class="sidebar-heading">My Links</p>
+  <div class="sidebar">
+    <p class="sidebar-heading">My Links</p>
 
-        <div class="sidebar-items">
-            <a [routerLink]="[bookmark.id]" href="" class="sidebar-item" *ngFor="let bookmark of bookmarks">{{bookmark.name}}</a>
-          
-        </div>
-</div>
+    <div class="sidebar-items">
+      <a [routerLink]="[bookmark.id]" href="" class="sidebar-item"
+         *ngFor="let bookmark of bookmarks">{{bookmark.name}}</a>
 
-<div class="content">
-    <app-edit-bookmark></app-edit-bookmark>
-</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
