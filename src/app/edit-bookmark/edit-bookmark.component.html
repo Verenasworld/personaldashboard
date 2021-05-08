@@ -3,8 +3,8 @@
     <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
       <div class="input-wrapper">
         <div class="form-field">
-            <label class="form-label"></label>
           <input class="textbox" 
+          #valueinputname
           [ngModel]="bookmark?.name"
            #textField="ngModel" 
            name="name" 
@@ -17,7 +17,7 @@
   
         <div class="form-field">
           <input class="textbox" 
-          [ngModel]="[bookmark?.url]" 
+          [ngModel]="bookmark?.url" 
            #textField="ngModel" 
            name="url" 
            type="url" 

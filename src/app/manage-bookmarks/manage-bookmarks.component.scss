@@ -26,6 +26,7 @@
     background-color: rgba(white, 0.5);
 backdrop-filter: blur(5px);
         overflow: auto;
+       
 
 }
 
@@ -47,4 +48,7 @@ backdrop-filter: blur(5px);
 .sidebar-item{
     color: rgba(65, 65, 65, 0.99);
     padding: 15px 25px;
+    &:hover{
+        background-color:rgba(white, 0.8); ;
+    }
 }
