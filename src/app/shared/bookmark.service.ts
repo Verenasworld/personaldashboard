@@ -17,7 +17,7 @@ export class BookmarkService {
      return this.bookmarks
    }
 
-   getBookmark( id: string){
+   getBookmark( id:string){
      return this.bookmarks.find(b => b.id === id)
    }
 

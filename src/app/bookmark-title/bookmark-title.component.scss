@@ -54,5 +54,16 @@
     align-items: center;
     height: 40px;
     width: 40px;
-
+        
 }
+
+.title-icon.fallback{
+    background-color:rgba(white, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
