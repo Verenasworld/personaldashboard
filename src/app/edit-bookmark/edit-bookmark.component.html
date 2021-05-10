@@ -1,6 +1,6 @@
 <div class="edit-bookmark-wrapper">
   <p *ngIf="!bookmark">Link not found, please first add ore select a link
-    <a routerLink="bookmark" class="btn">link</a>
+    <a routerLink="/bookmarks" class="btn">link</a>
   </p>
   <ng-container *ngIf="bookmark">
     <h2 class="">{{bookmark?.name}}</h2>
