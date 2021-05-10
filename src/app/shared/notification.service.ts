@@ -6,11 +6,21 @@ import { Subject } from 'rxjs';
 })
 export class NotificationService {
 
-  notification$: Subject<string> = new Subject()
+ private notification$: Subject<string> = new Subject();
+
+ get notifivcation(){
+   return this.notification$.asObservable()
+ }
 
   constructor() { }
 
   show(text:string){
-    this.notification$.next(text)
+    this.notification$.next(text);
   }
+
+// create service , 
+// we create a Subject - $ -  Convention for observabels,
+// when ever the show method is executed we will sending 
+//the notification text to all subscriber of this oject 
+
 }
