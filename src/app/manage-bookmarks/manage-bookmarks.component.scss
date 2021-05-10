@@ -32,6 +32,18 @@
 
 }
 
+.material-icons-outlined{
+    color: rgba(65, 65, 65, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    &:hover{
+        color: rgba(65, 65, 65, 0.9);
+    }
+    
+}
+
 .sidebar-item{
     position: relative;
     color: rgba(65, 65, 65, 0.99);
@@ -87,3 +99,5 @@ backdrop-filter: blur(5px);
        
 
 }
+
+

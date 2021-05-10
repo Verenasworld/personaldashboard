@@ -1,10 +1,28 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
-  styleUrls: ['./notification.component.scss']
+  styleUrls: ['./notification.component.scss'],
+  animations: [
+    trigger('notificationAnim', [
+      transition(':enter', [
+        style({
+          opacity: 0,
+          transform: 'translateY(8px)'
+        }),
+        animate('350ms 225ms ease-out')
+      ]),
+      transition(':leave', [
+        animate(225, style({
+          opacity: 0,
+          transform: 'scale(0.85)'
+        }))
+      ])
+    ])
+  ]
 })
 export class NotificationComponent implements OnInit {
 
@@ -23,7 +41,7 @@ export class NotificationComponent implements OnInit {
 
         this.notification = null
          
-      },1000)
+      },2000)
     })
   }
 

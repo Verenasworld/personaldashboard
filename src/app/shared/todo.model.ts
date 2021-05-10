@@ -5,7 +5,7 @@ export class Todo {
     compledet!: boolean
   
 
-    constructor(public text:string,){
+    constructor(public text:string){
         this.id = uuidv4()
        
         
