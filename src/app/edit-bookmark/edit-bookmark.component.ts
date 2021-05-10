@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { BookmarksComponent } from '../bookmarks/bookmarks.component';
@@ -11,6 +11,7 @@ import {BookmarkService} from '../shared/bookmark.service';
   styleUrls: ['./edit-bookmark.component.scss']
 })
 export class EditBookmarkComponent implements OnInit {
+
 
   bookmark: Bookmark | undefined;
 
@@ -34,9 +35,14 @@ export class EditBookmarkComponent implements OnInit {
     this.bookmarkService.updateBookmark(this.bookmark!.id , {
       name,
       url: new URL(url)
-      // we need a url object to update new url after edit the url
+      // we need a new URL , url  object to update new url after edit the url
     });
     this.router.navigateByUrl("/bookmarks")
   }
+
+   delete(){
+     this.bookmarkService.deleteBookmark(this.bookmark!.id);
+     this.router.navigate(['../'], {relativeTo: this.route})
+   }
 
 }
