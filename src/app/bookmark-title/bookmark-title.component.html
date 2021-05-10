@@ -3,7 +3,7 @@
     <div class="title-icon" *ngIf="!faviconError">
         <img [src]="titleiconSrc" alt="" (error)="faviconError=true">
     </div>
-    <div class="title-icon" *ngIf="faviconError">
+    <div class="title-icon fallback" *ngIf="faviconError">
         {{bookmark.name[0] | uppercase}} 
     </div>
     <p class="title-text">{{bookmark.name}}</p>
