@@ -8,7 +8,6 @@
 }
 
 .sidebar{
-    
     width: 200px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -18,20 +17,8 @@
 
 }
 
-.content{
-    flex-grow: 1;
-    background-color: burlywood;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: rgba(white, 0.5);
-backdrop-filter: blur(5px);
-        overflow: auto;
-       
-
-}
-
 .sidebar-heading{
-    color: rgba(65, 65, 65, 0.99);
+    color: rgba(65, 65, 65, 0.7);
     padding: 25px;
     font-size: 20px;
     font-weight: 200;
@@ -46,9 +33,57 @@ backdrop-filter: blur(5px);
 }
 
 .sidebar-item{
+    position: relative;
     color: rgba(65, 65, 65, 0.99);
     padding: 15px 25px;
     &:hover{
-        background-color:rgba(white, 0.8); ;
+        background-color:rgba(white, 0.8); 
+        color: rgba(65, 65, 65, 0.7);
     }
+
+    &:selected{
+        color: rgba(65, 65, 65, 0.99);
+        background-color:rgba(white, 0.5); 
+    }
+}
+
+.sidebar-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color:rgba(65, 65, 65, 0.7);;
+    transition: 0.5s;
+
+    //hide by defoult
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+
+
+
+
+
+.sidebar-item.selected::before{
+    opacity: 1;
+    transform: scaleY(1);
+    
+
+}
+
+
+
+.content{
+    flex-grow: 1;
+    background-color: burlywood;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(white, 0.5);
+backdrop-filter: blur(5px);
+        overflow: auto;
+       
+
 }

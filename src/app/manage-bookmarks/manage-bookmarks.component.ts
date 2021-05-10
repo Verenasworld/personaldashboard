@@ -9,7 +9,10 @@ import {BookmarkService} from '../shared/bookmark.service';
 })
 export class ManageBookmarksComponent implements OnInit {
 
-  bookmarks: Bookmark[] = [];
+  bookmarks: Bookmark[] = [
+
+
+  ];
 
   constructor(private bookmarksService: BookmarkService) {
   }

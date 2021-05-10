@@ -22,7 +22,6 @@ export class EditTodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      console.log('ToDO', paramMap);
       const todoId = paramMap.get('id');
       this.todo = this.todoService.getTodo(todoId!)
 

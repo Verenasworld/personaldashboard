@@ -1,5 +1,9 @@
 <div class="edit-bookmark-wrapper">
-    <h2 class="">Link Name</h2>
+  <p *ngIf="!bookmark">Link not found, please first add ore select a link
+    <a routerLink="bookmark" class="btn">link</a>
+  </p>
+  <ng-container *ngIf="bookmark">
+    <h2 class="">{{bookmark?.name}}</h2>
     <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
       <div class="input-wrapper">
         <div class="form-field">
@@ -34,5 +38,6 @@
          </div>
   
         </form>
+      </ng-container>
   
 </div>
