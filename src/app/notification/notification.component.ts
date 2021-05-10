@@ -8,7 +8,8 @@ import { NotificationService } from '../shared/notification.service';
 })
 export class NotificationComponent implements OnInit {
 
-  notification!: string;
+  notification!: any;
+  timeout: any;
 
   constructor( private notificationService: NotificationService) { }
 
@@ -16,9 +17,13 @@ export class NotificationComponent implements OnInit {
     this.notificationService.notifivcation.subscribe((notification : string)=>{
       this.notification = notification;
 
-      setTimeout(() => {
-        this.notification === null
-      },5000)
+      clearTimeout(this.timeout)
+
+      this.timeout = setTimeout(() => {
+
+        this.notification = null
+         
+      },1000)
     })
   }
 

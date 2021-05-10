@@ -39,7 +39,7 @@ export class EditBookmarkComponent implements OnInit {
       url: new URL(url)
       // we need a new URL , url  object to update new url after edit the url
     });
-    this.router.navigateByUrl("/bookmarks")
+    //this.router.navigateByUrl("/bookmarks")
     this.notificationService.show('Link is updated')
   }
 
