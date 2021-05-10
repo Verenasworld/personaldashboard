@@ -1,7 +1,10 @@
 
 <div class="bookmark-title">
-    <div class="title-icon">
-        <img [src]="titleiconSrc" alt="">
+    <div class="title-icon" *ngIf="!faviconError">
+        <img [src]="titleiconSrc" alt="" (error)="faviconError=true">
+    </div>
+    <div class="title-icon" *ngIf="faviconError">
+        {{bookmark.name[0] | uppercase}} 
     </div>
     <p class="title-text">{{bookmark.name}}</p>
 </div>
