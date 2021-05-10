@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { NotifacationData } from '../shared/notification-data.model';
 import { NotificationService } from '../shared/notification.service';
 
 @Component({
@@ -32,7 +33,7 @@ export class NotificationComponent implements OnInit {
   constructor( private notificationService: NotificationService) { }
 
   ngOnInit(): void {
-    this.notificationService.notifivcation.subscribe((notification : string)=>{
+    this.notificationService.notifivcation.subscribe((notification : NotifacationData)=>{
       this.notification = notification;
 
       clearTimeout(this.timeout)
@@ -41,8 +42,9 @@ export class NotificationComponent implements OnInit {
 
         this.notification = null
          
-      },2000)
+      },this.notification.duration)
     })
   }
 
+  //set duration of set timeout dynamic 
 }
