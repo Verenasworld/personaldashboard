@@ -39,7 +39,7 @@ export class EditTodoComponent implements OnInit {
     console.log('todoedit updated?:', form.value, this.todo!.id);
     //create an todo object and use the todo service to add the todo
     this.router.navigateByUrl("/todo");
-    this.notificationService.show('TODO is updated');
+    this.notificationService.show('Todo is updated!');
     return
   }
 

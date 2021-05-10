@@ -27,22 +27,22 @@ import { NotificationService } from '../shared/notification.service';
 })
 export class NotificationComponent implements OnInit {
 
-  notification!: any;
+  notification!: any[];
   timeout: any;
 
   constructor( private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.notificationService.notifivcation.subscribe((notification : NotifacationData)=>{
-      this.notification = notification;
+      this.notification = Array(notification);
 
       clearTimeout(this.timeout)
 
       this.timeout = setTimeout(() => {
 
-        this.notification = null
+        this.notification = null!
          
-      },this.notification.duration)
+      }, notification.duration)
     })
   }
 
