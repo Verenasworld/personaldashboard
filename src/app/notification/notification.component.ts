@@ -8,13 +8,17 @@ import { NotificationService } from '../shared/notification.service';
 })
 export class NotificationComponent implements OnInit {
 
-  notification! : string
+  notification!: string;
 
   constructor( private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.notificationService.notifivcation.subscribe((notification : string)=>{
-      this.notification = notification
+      this.notification = notification;
+
+      setTimeout(() => {
+        this.notification === null
+      },5000)
     })
   }
 
