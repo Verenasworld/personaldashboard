@@ -6,6 +6,8 @@ import { Bookmark } from './bookmark.model';
 })
 export class BookmarkService {
   bookmarks: Bookmark[] = [
+    new Bookmark('hallooo', 'http://localhost:4200/todo/add'),
+    new Bookmark('test2', 'http://localhost:4200/todo/add')
     
   ]
 
