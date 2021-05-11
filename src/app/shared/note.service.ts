@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { Injectable, } from '@angular/core';
+import { fromEvent, Subscriber } from 'rxjs';
 import { Note } from './note.model';
 
 @Injectable({
@@ -7,10 +9,20 @@ import { Note } from './note.model';
 export class NoteService {
   notes: Note[] = [
   ]
+  
 
 
   constructor() {
-    this.loadState()
+    this.loadState();
+
+    //listen to the strorage event from another (tap , window)
+    //function return a observable
+    // window = target | storage = eventname 
+
+    // fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
+    //  if (event.key=== 'notes') this.loadState()
+    //  console.log(event.key)
+    //  })
     }
 
   getNotes(){
@@ -66,8 +78,10 @@ saveState(){
 loadState(){
   try{
      const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
+     console.log('notes', notesInStorage)
      if(!notesInStorage) return
-     this.notes = notesInStorage
+     this.notes.length = 0 //clear the notes array ( while keeping the reference )
+     this.notes.push(...notesInStorage)
 
   }
   catch(e){
