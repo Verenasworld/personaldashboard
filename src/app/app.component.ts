@@ -93,6 +93,28 @@ import { RouterOutlet } from '@angular/router';
          ])
          
         ])
+    ]),
+
+    trigger('bgAnim', [
+      transition(':leave', [
+        animate(2000, style({
+          opacity: 0
+        }))
+      ])
+    ]),
+
+    trigger('fadeAnim', [
+      transition(':enter', [
+        style({ opacity: 0}),
+        animate(250,style({
+          opacity: 1
+        }))
+      ]),
+      transition(':leave', [
+        animate(250,style({
+          opacity:0
+        }))
+      ])
     ])
   ]
 })
@@ -102,12 +124,37 @@ export class AppComponent implements OnInit {
 
 
   theDate = new Date();
+  background: string[] = [
+    'https://images.unsplash.com/photo-1603234418621-56262863a43f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max'
+] 
+
+  loadingBgImage: boolean = false
 
 
   //observable
   prepareRoute(outlet: RouterOutlet){
     if (outlet.isActivated) {}
     return outlet.activatedRouteData['tabNum']
+  }
+
+   async changeBgImage(){
+     this.loadingBgImage = true
+   const result = await fetch('https://source.unsplash.com/random/1920x1080',{
+      method: 'HEAD'
+    })
+
+    
+
+    this.background.push(result.url);
+  }
+
+  onBgImageload(imgEvent: Event){
+    const imgElement = imgEvent.target as HTMLImageElement
+    const src = imgElement.src
+    this.background = this.background.filter(b => b === src)
+  
+
+    this.loadingBgImage = false
   }
 
   ngOnInit(){
@@ -118,3 +165,5 @@ export class AppComponent implements OnInit {
   }
   
 }
+//with .reverse setzen wit das neu geladene Bild in DOM unterhalb des erstens Array Inhaltes, durch laden die Bilder aber sie werden nicht angezeigt ums sie anzuzeigen -
+// remove the old bgimg from background array  ( with animation ) 
