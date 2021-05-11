@@ -92,6 +92,89 @@ import { RouterOutlet } from '@angular/router';
           ], { optional: true })
          ])
          
+        ]),
+
+        transition('* => secondary', [
+          style({
+            position: 'relative',
+            //overflow: 'hidden'
+          }),
+
+          query(':enter, :leave' ,[
+            style({
+
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%'
+            })
+
+          ],{optional: true}),
+
+    
+         group([
+          query(':leave',[
+            animate('400ms ease-in', style({
+              opacity: 0,
+              transform: 'scale(0.5)',
+            }))
+          ], {optional: true}),
+         
+          query(':enter', [
+            style({
+              opacity:0,
+              transform: 'scale(0.8)'
+            }),
+            animate('400ms 120ms ease-out', style({
+              opacity: 1 ,
+              transform: 'scale(1)'
+            
+            }))
+          ], { optional: true })
+         ])
+         
+        ]),
+        transition('* => secondary', [
+          style({
+            position: 'relative',
+            //overflow: 'hidden'
+          }),
+
+          query(':enter, :leave' ,[
+            style({
+
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%'
+            })
+
+          ],{optional: true}),
+
+    
+         group([
+          query(':leave',[
+            animate('400ms ease-in', style({
+              opacity: 0,
+              transform: 'scale(1)',
+            }))
+          ], {optional: true}),
+         
+          query(':enter', [
+            style({
+              opacity:0,
+              transform: 'scale(0.8)'
+            }),
+            animate('400ms 120ms ease-out', style({
+              opacity: 1 ,
+              transform: 'scale(0.5)'
+            
+            }))
+          ], { optional: true })
+         ])
+
         ])
     ]),
 
@@ -106,12 +189,12 @@ import { RouterOutlet } from '@angular/router';
     trigger('fadeAnim', [
       transition(':enter', [
         style({ opacity: 0}),
-        animate(250,style({
+        animate(550,style({
           opacity: 1
         }))
       ]),
       transition(':leave', [
-        animate(250,style({
+        animate(550,style({
           opacity:0
         }))
       ])
@@ -133,8 +216,14 @@ export class AppComponent implements OnInit {
 
   //observable
   prepareRoute(outlet: RouterOutlet){
-    if (outlet.isActivated) {}
-    return outlet.activatedRouteData['tabNum']
+    if (outlet.isActivated) {
+      const tab =  outlet.activatedRouteData['tabNum'];
+      if (!tab) return 'secondary';
+      return tab;
+    }
+    
+
+    //different animation when the route has no tabNum
   }
 
    async changeBgImage(){
