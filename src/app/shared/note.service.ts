@@ -64,8 +64,18 @@ saveState(){
 //load the state from local storage 
 //JSON.parse()- erzeugt aus einem JSON- format txt ein js object. 
 loadState(){
-  const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
-  this.notes = notesInStorage
+  try{
+     const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
+     if(!notesInStorage) return
+     this.notes = notesInStorage
+
+  }
+  catch(e){
+    console.log('There was an error retrieving the notes from localStorage')
+    console.log(e);
+
+}
+  
 }
 
 }
