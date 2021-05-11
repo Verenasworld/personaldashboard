@@ -1,5 +1,5 @@
 <div class="app-wrapper">
-  <img class="bg-img" [src]="bg" (load)="onBgImageload()">
+  <img class="bg-img" [src]="bg" *ngFor="let bg of background" (load)="onBgImageload()">
   <!--use property binding & listen to loadevent-->
 
   <div class="btn change-bg-btn" (click)="changeBgImage()" *ngIf="!loadingBgImage">
