@@ -1,6 +1,8 @@
 <div class="app-wrapper">
+  <img class="bg-img" [src]="bg">
+  <!--use property binding -->
 
-  <div class="btn change-bg-btn">
+  <div class="btn change-bg-btn" (click)="changeBgImage()">
     <i class="material-icons">refresh</i>
   </div>
   <div class="top-section">

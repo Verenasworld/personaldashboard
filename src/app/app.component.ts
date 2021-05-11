@@ -102,12 +102,21 @@ export class AppComponent implements OnInit {
 
 
   theDate = new Date();
+  bg:string = 'https://images.unsplash.com/photo-1603234418621-56262863a43f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max'
 
 
   //observable
   prepareRoute(outlet: RouterOutlet){
     if (outlet.isActivated) {}
     return outlet.activatedRouteData['tabNum']
+  }
+
+   async changeBgImage(){
+   const result = await fetch('https://source.unsplash.com/random',{
+      method: 'HEAD'
+    })
+
+    this.bg = result.url
   }
 
   ngOnInit(){
