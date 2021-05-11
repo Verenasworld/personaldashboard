@@ -109,6 +109,11 @@ import { RouterOutlet } from '@angular/router';
         animate(250,style({
           opacity: 1
         }))
+      ]),
+      transition(':leave', [
+        animate(250,style({
+          opacity:0
+        }))
       ])
     ])
   ]

@@ -10,7 +10,8 @@
   <div 
   class="btn change-bg-btn" 
   (click)="changeBgImage()" 
-  *ngIf="!loadingBgImage">
+  *ngIf="!loadingBgImage"
+  @fadeAnim>
     <i class="material-icons">refresh</i>
   </div>
   <div class="top-section">
