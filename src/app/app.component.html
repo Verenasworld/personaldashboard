@@ -1,8 +1,8 @@
 <div class="app-wrapper">
-  <img class="bg-img" [src]="bg">
-  <!--use property binding -->
+  <img class="bg-img" [src]="bg" (load)="onBgImageload()">
+  <!--use property binding & listen to loadevent-->
 
-  <div class="btn change-bg-btn" (click)="changeBgImage()">
+  <div class="btn change-bg-btn" (click)="changeBgImage()" *ngIf="!loadingBgImage">
     <i class="material-icons">refresh</i>
   </div>
   <div class="top-section">

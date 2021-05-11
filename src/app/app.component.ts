@@ -104,6 +104,8 @@ export class AppComponent implements OnInit {
   theDate = new Date();
   bg:string = 'https://images.unsplash.com/photo-1603234418621-56262863a43f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max'
 
+  loadingBgImage: boolean = false
+
 
   //observable
   prepareRoute(outlet: RouterOutlet){
@@ -112,11 +114,16 @@ export class AppComponent implements OnInit {
   }
 
    async changeBgImage(){
-   const result = await fetch('https://source.unsplash.com/random',{
+     this.loadingBgImage = true
+   const result = await fetch('https://source.unsplash.com/random/1920x1080',{
       method: 'HEAD'
     })
 
     this.bg = result.url
+  }
+
+  onBgImageload(){
+    this.loadingBgImage = false
   }
 
   ngOnInit(){
