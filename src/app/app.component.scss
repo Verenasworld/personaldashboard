@@ -51,6 +51,24 @@ min-height: 0;
 
 i{
     color: rgb(177, 173, 173);
-    font-size: 50px;
+    font-size: 30px;
+    &:hover{
+        color: rgb(129, 129, 129);
+
+    }
 }
 
+.change-bg-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+   margin: 35px 35px;
+   padding: 10px 15px;
+   cursor: pointer;
+
+   &:active{
+     transform: translateY(3px);  
+   }
+     
+}
