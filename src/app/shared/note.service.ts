@@ -1,6 +1,6 @@
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { Injectable, } from '@angular/core';
-import { fromEvent, Subscriber } from 'rxjs';
+
+import { Injectable, OnDestroy, } from '@angular/core';
+import { fromEvent, Subscription } from 'rxjs';
 import { Note } from './note.model';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { Note } from './note.model';
 export class NoteService {
   notes: Note[] = [
   ]
+  //storageListenSub: Subscription
   
 
 
@@ -19,11 +20,21 @@ export class NoteService {
     //function return a observable
     // window = target | storage = eventname 
 
+    // this.storageListenSub = fromEvent(window, 'storage')
+    // .subscribe((event: StorageEvent) => {
+    //   if (event.key === 'notes') this.loadState()
+    // })
+
     // fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
     //  if (event.key=== 'notes') this.loadState()
     //  console.log(event.key)
     //  })
-    }
+    // }
+
+    // ngOnDestroy() {
+    //   if (this.storageListenSub) this.storageListenSub.unsubscribe()
+    //
+   }
 
   getNotes(){
     return this.notes
