@@ -6,14 +6,12 @@ import { Note } from './note.model';
 })
 export class NoteService {
   notes: Note[] = [
-    new Note ('title', 'thats working great'),
-    new Note ('easy', 'thats cool'),
   ]
 
 
   constructor() {
-
-   }
+    this.loadState()
+    }
 
   getNotes(){
     return this.notes
@@ -60,6 +58,14 @@ deleteNote(id:string){
 //notes array in localstorage as json string - each time wenn we add a note we want to saveState and each time when we want updateNote and also when we delete the note
 saveState(){
  localStorage.setItem('notes', JSON.stringify(this.notes));
+}
+
+
+//load the state from local storage 
+//JSON.parse()- erzeugt aus einem JSON- format txt ein js object. 
+loadState(){
+  const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
+  this.notes = notesInStorage
 }
 
 }
