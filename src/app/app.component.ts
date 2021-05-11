@@ -101,6 +101,15 @@ import { RouterOutlet } from '@angular/router';
           opacity: 0
         }))
       ])
+    ]),
+
+    trigger('fadeAnim', [
+      transition(':enter', [
+        style({ opacity: 0}),
+        animate(250,style({
+          opacity: 1
+        }))
+      ])
     ])
   ]
 })
