@@ -1,5 +1,5 @@
 
-<div class="bookmark-title" >
+<a [href]="bookmark.url" target="_blank" class="bookmark-title" >
     <div class="title-icon" *ngIf="!faviconError">
         <img [src]="titleiconSrc" alt="" (error)="faviconError=true">
     </div>
@@ -7,4 +7,4 @@
         {{bookmark.name[0] | uppercase}} 
     </div>
     <p class="title-text">{{bookmark.name}}</p>
-</div>
+</a>
