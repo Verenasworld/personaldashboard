@@ -93,6 +93,14 @@ import { RouterOutlet } from '@angular/router';
          ])
          
         ])
+    ]),
+
+    trigger('bgAnim', [
+      transition(':leave', [
+        animate(2000, style({
+          opacity: 0
+        }))
+      ])
     ])
   ]
 })
@@ -129,7 +137,8 @@ export class AppComponent implements OnInit {
   onBgImageload(imgEvent: Event){
     const imgElement = imgEvent.target as HTMLImageElement
     const src = imgElement.src
-    console.log(src)
+    this.background = this.background.filter(b => b === src)
+  
 
     this.loadingBgImage = false
   }
@@ -143,4 +152,4 @@ export class AppComponent implements OnInit {
   
 }
 //with .reverse setzen wit das neu geladene Bild in DOM unterhalb des erstens Array Inhaltes, durch laden die Bilder aber sie werden nicht angezeigt ums sie anzuzeigen -
-// remove the old img from background array  ( with animation ) 
+// remove the old bgimg from background array  ( with animation ) 

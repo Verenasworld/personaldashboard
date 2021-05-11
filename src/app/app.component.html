@@ -1,8 +1,16 @@
 <div class="app-wrapper">
-  <img class="bg-img" [src]="bg" *ngFor="let bg of background.reverse()" (load)="onBgImageload($event)">
+  <img 
+  class="bg-img" 
+  [src]="bg" 
+  *ngFor="let bg of background.reverse()" 
+  (load)="onBgImageload($event)"
+  @bgAnim>
   <!--use property binding & listen to loadevent-->
 
-  <div class="btn change-bg-btn" (click)="changeBgImage()" *ngIf="!loadingBgImage">
+  <div 
+  class="btn change-bg-btn" 
+  (click)="changeBgImage()" 
+  *ngIf="!loadingBgImage">
     <i class="material-icons">refresh</i>
   </div>
   <div class="top-section">
