@@ -23,6 +23,7 @@ import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
 import { ManageBookmarksComponent } from './manage-bookmarks/manage-bookmarks.component';
 import { EditBookmarkComponent } from './edit-bookmark/edit-bookmark.component';
 import { NotificationComponent } from './notification/notification.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -47,6 +48,7 @@ import { NotificationComponent } from './notification/notification.component';
     ManageBookmarksComponent,
     EditBookmarkComponent,
     NotificationComponent,
+    LoginComponent,
    
   ],
   imports: [
