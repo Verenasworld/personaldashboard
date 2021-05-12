@@ -1,0 +1,25 @@
+<div class="login-wrapper container has-blurred-white-bg">
+    <h2> Login</h2>
+    <div class="form-field">
+
+
+       <input  class="textbox" 
+            name="email" 
+            [(ngModel)]="email" 
+             type="text"
+             placeholder="Enter your Email"/>
+        <input class="textbox" 
+            name="password"
+            [(ngModel)]="password"
+            type="password"
+            placeholder="Enter your Password"/>
+ <div class="btns-container">
+    
+    <button class="btn" (click)="createUser()">Create User</button>
+    <button class="btn align-end" (click)="login()">Login</button>
+
+</div>
+    
+    </div>
+   
+</div>

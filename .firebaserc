@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dashboard-67b96": {
+      "hosting": {
+        "personaldashboard": [
+          "dashboard-67b96"
+        ]
+      }
+    }
+  }
+}

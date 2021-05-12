@@ -10,12 +10,13 @@ import {ChatComponent} from './chat/chat.component';
 import {EditBookmarkComponent} from './edit-bookmark/edit-bookmark.component';
 import {EditNoteComponent} from './edit-note/edit-note.component';
 import {EditTodoComponent} from './edit-todo/edit-todo.component';
+import { LoginComponent } from './login/login.component';
 import {ManageBookmarksComponent} from './manage-bookmarks/manage-bookmarks.component';
 import {NotesComponent} from './notes/notes.component';
 import {TodoComponent} from './todo/todo.component';
 
 const routes: Routes = [
-
+  {path: '', component: LoginComponent, data: {tabNum: 0}},
   {path: 'bookmarks', component: BookmarksComponent, data: {tabNum: 1}},
   {path: 'bookmarks/add', component: AddBookmarkComponent},
   {path: 'bookmarks/manage', component: ManageBookmarksComponent,
