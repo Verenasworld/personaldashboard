@@ -24,6 +24,8 @@ import { ManageBookmarksComponent } from './manage-bookmarks/manage-bookmarks.co
 import { EditBookmarkComponent } from './edit-bookmark/edit-bookmark.component';
 import { NotificationComponent } from './notification/notification.component';
 import { LoginComponent } from './login/login.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -57,7 +59,8 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    AngularFireModule.initializeApp(environment.firebase)
     
 
     
