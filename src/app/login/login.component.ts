@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   email: string = ""
   password: string = ""
-  operationType: string = ""
+
  
 
   constructor( public auth: AngularFireAuth, private router: Router) { }
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
     .catch(error => console.log(error.code)
     )
     .then(user => console.log(user));
-    if(this.operationType = "signIn")
     this.router.navigate(['/todo'])
 
 }
@@ -34,6 +33,7 @@ export class LoginComponent implements OnInit {
 createUser(){
  this.auth.createUserWithEmailAndPassword(this.email, this.password)
   .then(user => console.log(user));
+  this.router.navigate(['/todo'])
 
 
 }
