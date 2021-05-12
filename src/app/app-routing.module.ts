@@ -16,7 +16,7 @@ import {NotesComponent} from './notes/notes.component';
 import {TodoComponent} from './todo/todo.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent, data: {tabNum: 0}},
   {path: 'bookmarks', component: BookmarksComponent, data: {tabNum: 1}},
   {path: 'bookmarks/add', component: AddBookmarkComponent},
   {path: 'bookmarks/manage', component: ManageBookmarksComponent,
