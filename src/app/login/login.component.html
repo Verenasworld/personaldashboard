@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="login-wrapper">
+    <div class="container">
+
+        <h2> Login</h2>
+
+        Email: <input  
+            name="email" 
+            [(ngModel)]="email" 
+             type="text"/>
+        Password: <input 
+            name="password"
+            [(ngModel)]="password"
+            type="password"/>
+
+        <button (click)="login()">Login</button>
+    </div>
+   
+</div>
