@@ -1,6 +1,6 @@
 
 import { Injectable, OnDestroy, } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { from, fromEvent, Subscription } from 'rxjs';
 import { Note } from './note.model';
 
 @Injectable({
@@ -22,14 +22,14 @@ export class NoteService {
 
     // this.storageListenSub = fromEvent(window, 'storage')
     // .subscribe((event: StorageEvent) => {
-    //   if (event.key === 'notes') this.loadState()
+    //   if (e vent.key === 'notes') this.loadState()
     // })
-
-    // fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
-    //  if (event.key=== 'notes') this.loadState()
-    //  console.log(event.key)
-    //  })
-    // }
+    //@ts-ignore
+   fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
+     if (event.key=== 'notes') this.loadState()
+     console.log(event.key);
+      })
+    
 
     // ngOnDestroy() {
     //   if (this.storageListenSub) this.storageListenSub.unsubscribe()
@@ -37,7 +37,7 @@ export class NoteService {
    }
 
   getNotes(){
-    return this.notes
+    return this.notes;
   }
 
   // get Note return true when the (object-id) n.id quals the id id passed into this    method
@@ -46,7 +46,7 @@ export class NoteService {
       //one line error function (shorthand) 
 
   getNote(id: string) {
-     return this.notes.find(n => n.id === id)
+     return this.notes.find(n => n.id === id);
   }
 
   addNote(note: Note){
@@ -89,7 +89,7 @@ saveState(){
 loadState(){
   try{
      const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
-     console.log('notes', notesInStorage)
+    
      if(!notesInStorage) return
      this.notes.length = 0 //clear the notes array ( while keeping the reference )
      this.notes.push(...notesInStorage)
