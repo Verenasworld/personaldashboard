@@ -22,7 +22,7 @@
 
 }
 .top-section{
-//background-color: antiquewhite;
+
 text-align: center;
 padding: 50px 0;
 margin: 20px;
@@ -37,20 +37,21 @@ h1{
 }
 h2{
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(22, 22, 22);
     text-shadow: 0px 1px 7px rgb(black, 0.1);
     padding: 10px;
 }
 
 }
 .content-section{
-//background-color: aquamarine;
+
+margin: 20px;
 flex-grow: 1;
 min-height: 0;
 }
 
 .bottom-section{
-    //background-color: cadetblue;
+    
     display: flex;
     app-tabs{
         margin: auto;
@@ -59,10 +60,10 @@ min-height: 0;
 }
 
 i{
-    color: rgb(255, 255, 255);
+    color: rgb(90, 89, 89);
     font-size: 30px;
     &:hover{
-        color: rgb(129, 129, 129);
+        color: rgb(22, 22, 22);
 
     }
 }
@@ -72,7 +73,7 @@ i{
     top: 0;
     right: 0;
     z-index: 1;
-   margin: 35px 35px;
+   margin: 25px 25px;
    padding: 10px 15px;
    cursor: pointer;
 

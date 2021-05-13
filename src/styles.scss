@@ -36,7 +36,7 @@ a{
 }
 
 .container{
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -55,7 +55,7 @@ a{
 }
 
 .has-blurred-white-bg{
-    background-color:rgba(white, 0.5);
+    background-color:rgba(white, 0.7);
     backdrop-filter: blur(2px);
 }
 html, body { height: 100%; }
