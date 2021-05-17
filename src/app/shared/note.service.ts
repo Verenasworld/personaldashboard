@@ -1,6 +1,6 @@
 
 import { Injectable, OnDestroy, } from '@angular/core';
-import { from, fromEvent, Subscription } from 'rxjs';
+import { fromEvent, Subscription } from 'rxjs';
 import { Note } from './note.model';
 
 @Injectable({
