@@ -27,7 +27,8 @@ export class NoteService implements OnDestroy {
     
     //@ts-ignore
    this.storageListenSub = fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
-     if (event.key=== 'notes') this.loadState()
+     if (event.key=== 'notes') 
+     this.loadState()
      console.log(event.key);
       });
     
@@ -35,7 +36,7 @@ export class NoteService implements OnDestroy {
     
    }
   ngOnDestroy(): void {
-    if (this.storageListenSub) this.storageListenSub.unsubscribe()
+    if (this.storageListenSub) this.storageListenSub.unsubscribe();
   }
 
   getNotes(){
