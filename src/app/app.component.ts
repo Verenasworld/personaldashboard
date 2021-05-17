@@ -210,7 +210,7 @@ export class AppComponent implements OnInit {
     'https://images.unsplash.com/photo-1603234418621-56262863a43f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max'
 ] 
 
-  loadingBgImage: boolean = false
+  loadingBgImage: boolean = false;
 
 
   //observable
@@ -226,8 +226,8 @@ export class AppComponent implements OnInit {
   }
 
    async changeBgImage(){
-     this.loadingBgImage = true
-   const result = await fetch('https://source.unsplash.com/random/1920x1080',{
+     this.loadingBgImage = true;
+   const result = await fetch('https://source.unsplash.com/1920x1080/?sky',{
       method: 'HEAD'
     })
 
@@ -237,18 +237,18 @@ export class AppComponent implements OnInit {
   }
 
   onBgImageload(imgEvent: Event){
-    const imgElement = imgEvent.target as HTMLImageElement
-    const src = imgElement.src
-    this.background = this.background.filter(b => b === src)
+    const imgElement = imgEvent.target as HTMLImageElement;
+    const src = imgElement.src;
+    this.background = this.background.filter(b => b === src);
   
 
-    this.loadingBgImage = false
+    this.loadingBgImage = false;
   }
 
   ngOnInit(){
     setInterval(()=>{
-       this.theDate = new Date()
-    },1000)
+       this.theDate = new Date();
+    },1000);
 
   }
   

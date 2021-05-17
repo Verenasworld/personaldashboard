@@ -6,10 +6,10 @@ import { Note } from './note.model';
 @Injectable({
   providedIn: 'root'
 })
-export class NoteService {
+export class NoteService implements OnDestroy {
   notes: Note[] = [
   ]
-  //storageListenSub: Subscription
+  storageListenSub: Subscription
   
 
 
@@ -24,17 +24,19 @@ export class NoteService {
     // .subscribe((event: StorageEvent) => {
     //   if (e vent.key === 'notes') this.loadState()
     // })
+    
     //@ts-ignore
-   fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
+   this.storageListenSub = fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
      if (event.key=== 'notes') this.loadState()
      console.log(event.key);
-      })
+      });
     
 
-    // ngOnDestroy() {
-    //   if (this.storageListenSub) this.storageListenSub.unsubscribe()
-    //
+    
    }
+  ngOnDestroy(): void {
+    if (this.storageListenSub) this.storageListenSub.unsubscribe()
+  }
 
   getNotes(){
     return this.notes;
@@ -90,7 +92,7 @@ loadState(){
   try{
      const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
     
-     if(!notesInStorage) return
+    // if(!notesInStorage) return
      this.notes.length = 0 //clear the notes array ( while keeping the reference )
      this.notes.push(...notesInStorage)
 
