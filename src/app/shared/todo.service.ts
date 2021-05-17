@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { Subscription, fromEvent } from 'rxjs';
 import { Todo } from './todo.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TodoService {
+export class TodoService implements OnDestroy {
 
   todos: Todo[] = [
    
@@ -27,6 +27,9 @@ export class TodoService {
 
 
    }
+  ngOnDestroy(): void {
+    if (this.storageListenSub) this.storageListenSub.unsubscribe();
+  }
   
   getTodos(){
     return this.todos;

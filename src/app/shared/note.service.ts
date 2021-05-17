@@ -94,12 +94,12 @@ loadState(){
      const notesInStorage = JSON.parse(localStorage.getItem('notes')!);
     
     // if(!notesInStorage) return
-     this.notes.length = 0 //clear the notes array ( while keeping the reference )
-     this.notes.push(...notesInStorage)
+     this.notes.length = 0;//clear the notes array ( while keeping the reference )
+     this.notes.push(...notesInStorage);
 
   }
   catch(e){
-    console.log('There was an error retrieving the notes from localStorage')
+    console.log('There was an error retrieving the notes from localStorage');
     console.log(e);
 
 }
