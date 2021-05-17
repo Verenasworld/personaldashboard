@@ -11,7 +11,7 @@ export class TodoService implements OnDestroy {
    
   ]
 
-  storageListenSub: Subscription
+  storageListenSub: Subscription;
 
 
   constructor() {
@@ -20,7 +20,7 @@ export class TodoService implements OnDestroy {
   //@ts-ignore
   this.storageListenSub = fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
     if (event.key=== 'todo') 
-    this.loadState()
+    this.loadState();
     console.log(event.key);
      });
    
