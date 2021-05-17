@@ -61,6 +61,7 @@ export class BookmarkService implements OnDestroy {
     try{
       const bookmarkInStorage = JSON.parse(localStorage.getItem('bookmark')!,(key, value) => {
         if (key == 'url') return new URL(value)
+        // check if the key equal to url then we will return new url value
         return value;
       // transform it that we see favicon , with reviver
       // convert to a object 
