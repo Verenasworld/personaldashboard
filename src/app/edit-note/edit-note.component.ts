@@ -27,9 +27,7 @@ export class EditNoteComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
   
       const idParam = paramMap?.get('id')
-      //if (idParam == null || undefined )
-      //return
-      // if (typeof Note !== "undefined")
+
         this.note = this.noteService.getNote(idParam!)
   })
   }
