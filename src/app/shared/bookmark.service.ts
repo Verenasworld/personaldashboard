@@ -59,15 +59,16 @@ export class BookmarkService implements OnDestroy {
 
    loadState(){
     try{
-      const bookmarkInStorage = JSON.parse(localStorage.getItem('bookmark')!, (key, value)=>{
-        return value
-      })
-
+      const bookmarkInStorage = JSON.parse(localStorage.getItem('bookmark')!,(key, value) => {
+        if (key == 'url') return new URL(value)
+        return value;
+      // transform it that we see favicon , with reviver
+      // convert to a object 
+      });
       this.bookmarks.length = 0;
       this.bookmarks.push(...bookmarkInStorage);
 
-      // transform it that we see favicon , 
-      // convert to a object 
+      
     }
     catch(e){
       console.log('There was an error retrieving the bookmark from localStorage');
