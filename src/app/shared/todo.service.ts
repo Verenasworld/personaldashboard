@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subscription, fromEvent } from 'rxjs';
 import { Todo } from './todo.model';
 
 @Injectable({
@@ -9,8 +10,22 @@ export class TodoService {
   todos: Todo[] = [
    
   ]
+
+  storageListenSub: Subscription
+
+
   constructor() {
    this.loadState();
+
+  //@ts-ignore
+  this.storageListenSub = fromEvent(window, 'storage').subscribe((event: StorageEvent) => {
+    if (event.key=== 'todo') 
+    this.loadState()
+    console.log(event.key);
+     });
+   
+
+
    }
   
   getTodos(){
@@ -54,7 +69,7 @@ deleteTodo(id:string){
   try{
     const todoInStorage = JSON.parse(localStorage.getItem('todo')!);
     this.todos.length = 0;
-    this.todos.push(...todoInStorage)
+    this.todos.push(...todoInStorage);
   }
   catch(e){
     console.log('There was an error retrieving the todos from localStorage');
