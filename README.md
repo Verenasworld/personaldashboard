@@ -12,6 +12,8 @@ https://user-images.githubusercontent.com/51680972/118993071-7d5d7d80-b985-11eb-
 #LINKLIST |  #TODOLIST  | #NOTESLIST
 #preview |  #inprogress | #localstorage
 
+tutorial from : https://www.youtube.com/watch?v=VBIUe9KaCFc
+
 # Personaldashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
