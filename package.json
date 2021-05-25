@@ -32,6 +32,7 @@
     "@angular-devkit/build-angular": "~0.1102.0",
     "@angular/cli": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
+    "@testing-library/angular": "^10.7.1",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "@types/uuid": "^8.3.0",
