@@ -1,3 +1,19 @@
+
+https://user-images.githubusercontent.com/51680972/119000832-bc8ecd00-b98b-11eb-9d3a-f7f089fdec85.mp4
+
+
+
+https://user-images.githubusercontent.com/51680972/118997276-d67ae080-b988-11eb-9297-bf252d005a35.mp4
+
+
+
+https://user-images.githubusercontent.com/51680972/118993071-7d5d7d80-b985-11eb-9940-7e46872a0c87.mp4
+
+#LINKLIST |  #TODOLIST  | #NOTESLIST
+#preview |  #inprogress | #localstorage
+
+tutorial from : https://www.youtube.com/watch?v=VBIUe9KaCFc
+
 # Personaldashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
