@@ -145,7 +145,7 @@
     "component-selector": [
       true,
       "element",
-      "app",
+      "organize",
       "kebab-case"
     ]
   }

@@ -26,6 +26,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -51,6 +52,7 @@ import { environment } from 'src/environments/environment';
     EditBookmarkComponent,
     NotificationComponent,
     LoginComponent,
+    TestComponent,
    
   ],
   imports: [
