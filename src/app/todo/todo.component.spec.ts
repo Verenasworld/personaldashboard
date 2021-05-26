@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NotificationService } from '../shared/notification.service';
+import { TodoService } from '../shared/todo.service';
 
 import { TodoComponent } from './todo.component';
 
@@ -8,7 +11,8 @@ describe('TodoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodoComponent ]
+      declarations: [ TodoComponent ],
+      providers: [ TodoService , NotificationService, RouterTestingModule ]
     })
     .compileComponents();
   });
@@ -23,3 +27,4 @@ describe('TodoComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
