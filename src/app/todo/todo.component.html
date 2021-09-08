@@ -1,7 +1,9 @@
 <div class="todo-wrapper">
 
-   <div class="container"> 
-
+   <div class="container">
+       <div class="btns-container btns-centered">
+           <a routerLink="add" class="btn"> + Add</a>
+       </div>
     <app-todo-item 
       @todoItemAnim
        *ngFor="let todo of todos; index as i; trackBy: trackById" 
@@ -13,8 +15,6 @@
       
        
    </app-todo-item>
-    <div class="btns-container btns-centered">
-        <a routerLink="add" class="btn"> + Add</a>
-     </div>
+
 </div>
 </div>
