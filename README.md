@@ -1,4 +1,7 @@
 
+
+
+
 https://user-images.githubusercontent.com/51680972/119000832-bc8ecd00-b98b-11eb-9d3a-f7f089fdec85.mp4
 
 
@@ -19,6 +22,9 @@ tutorial from : https://www.youtube.com/watch?v=VBIUe9KaCFc
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
+
+npmi 
+add angular/material 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
