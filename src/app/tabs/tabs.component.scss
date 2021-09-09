@@ -130,7 +130,8 @@
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 80px;
-    color: #555;
+    color: white;
+    text-transform:uppercase;
     background-color:rgba(white, 0.5);
     text-align: center;
     padding: 5px 0;
@@ -145,7 +146,7 @@
   
     /* Fade in tooltip */
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: all 0.2s ease-in-out;
   }
   
   /* Tooltip arrow */
@@ -157,7 +158,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(235, 234, 234) transparent transparent transparent;
+border-color: rgb(235, 234, 234) transparent transparent transparent;
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
@@ -165,3 +166,4 @@
     visibility: visible;
     opacity: 1;
   }
+
