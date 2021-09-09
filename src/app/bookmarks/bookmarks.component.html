@@ -1,17 +1,18 @@
 <div class="bookmarks-wrapper">
    <div class="container">
-    <div class="bookmark-titles-container">
-    <app-bookmark-title *ngFor= "let bookmark of bookmarks" [bookmark]= "bookmark"></app-bookmark-title>
-   </div>
-   <div class="btns-container btns-centered">
-      <a routerLink="add" class="btn">
+      <div class="btns-container btns-centered">
+         <a routerLink="add" class="btn">
          <span class="material-icons-outlined">
             add </span> Add</a>
-      <a routerLink="manage" class="btn">
+         <a routerLink="manage" class="btn">
          <span class="material-icons-outlined">
-            settings 
+            settings
             </span> Manage</a>
+      </div>
+
+      <div class="bookmark-titles-container">
+    <app-bookmark-title *ngFor= "let bookmark of bookmarks" [bookmark]= "bookmark"></app-bookmark-title>
    </div>
-  
+
    </div>
 </div>

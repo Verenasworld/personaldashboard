@@ -82,3 +82,16 @@ i{
    }
      
 }
+
+@media screen and(max-width: 800px){
+.top-section{
+padding: 10px;
+}
+.top-section h1{
+ font-size: 2em;
+}
+.change-bg-btn{
+margin: 20px 20px;
+   padding: 5px 10px;
+}
+}

@@ -16,3 +16,11 @@
     color: rgba(104, 104, 104, 0.80);
     padding-right: 10px;
 }
+@media screen and(max-width: 800px){
+.bookmarks-wrapper{
+margin: 0;
+}
+.bookmark-titles-container{
+  gap: 10px;
+}
+}
